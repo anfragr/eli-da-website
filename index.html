@@ -198,7 +198,7 @@ blockquote{font-family:var(--serif);font-size:clamp(1.05rem,1.8vw,1.3rem);font-w
 
 /* CTA */
 #cta{position:relative;overflow:hidden;min-height:540px;display:flex;align-items:center;justify-content:center;padding:clamp(4.5rem,9vw,9rem) clamp(1.5rem,5vw,3rem);text-align:center}
-.cta-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=85&auto=format&fit=crop')}
+.cta-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center 60%;background-image:url('../Images/2025_DerersteSchritt.jpg')}
 .cta-bg::after{content:'';position:absolute;inset:0;background:rgba(10,6,6,.62)}
 .cta-c{position:relative;z-index:1;max-width:640px}
 .cta-h{font-family:var(--serif);font-size:clamp(2rem,5vw,4rem);font-weight:300;color:#fff;line-height:1.12;letter-spacing:-.02em;margin-bottom:1.1rem}
@@ -245,6 +245,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
 <nav id="nav">
   <a href="#hero" class="logo">ELI-DA<span class="logo-sub">Elisabeth Daniel</span></a>
   <ul class="nl">
+    <li><a href="#hero">Start</a></li>
     <li><a href="#wege">Angebot</a></li>
     <li><a href="#kurse">Kurse</a></li>
     <li><a href="#ueber">Über mich</a></li>
@@ -254,6 +255,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
   <button class="ham" id="ham"><span></span><span></span><span></span></button>
 </nav>
 <div class="mob" id="mob">
+  <a href="#hero" onclick="cm()">Start</a>
   <a href="#wege" onclick="cm()">Angebot</a>
   <a href="#kurse" onclick="cm()">Kurse & Termine</a>
   <a href="#ueber" onclick="cm()">Über mich</a>
@@ -265,7 +267,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-c">
-    <p class="hero-label rv">Mag. Elisabeth Daniel · Graz & Eggersdorf</p>
+    <p class="hero-label rv">Mag. Elisabeth Daniel · Graz und Graz-Umgebung</p>
     <h1 class="rv d1">Aktiv, vital<br>und <em>lebensfroh.</em></h1>
     <p class="hero-sub rv d2">Beratung, Coaching und Bewegung für mehr Balance, Gesundheit und Lebensfreude – für Körper, Geist und Seele.</p>
     <div class="brow rv d3">
@@ -314,7 +316,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
   <div style="max-width:1200px;margin:0 auto">
     <div class="wege-head rv">
       <span class="ey">Das Angebot</span>
-      <h2 class="sh">Drei Wege zu mehr Leichtigkeit und Lebensfreude</h2>
+      <h2 class="sh">Wege zu mehr Leichtigkeit und Lebensfreude</h2>
     </div>
 
     <!-- BERATUNG – ruhige Frau in Natur, Achtsamkeit, Stille -->
@@ -343,7 +345,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
     <!-- BEWEGUNG – Yoga im Freien, Morgenlicht, Natur -->
     <div class="split rev rv">
       <div class="si">
-        <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=85&auto=format&fit=crop" alt="Yoga und Bewegung im Freien" style="object-position:center 22%">
+        <img src="../Images/2025Yoga1.JPG" alt="Elisabeth Daniel beim Yoga im Freien" style="object-position:center 20%">
       </div>
       <div class="sb">
         <div class="wn">02</div>
@@ -363,22 +365,46 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
     </div>
 
     <!-- SENIOREN – aktive ältere Frau, Bewegung, Sonne, Lebensfreude -->
-    <div class="wfull rv">
-      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&q=85&auto=format&fit=crop" alt="Körperliche und geistige Fitness bis ins hohe Alter" style="object-position:center 40%">
-      <div class="wfull-body">
-        <div class="wft">
-          <div class="wfn">03</div>
-          <h3 class="wfh">Körperliche & geistige Fitness bis ins hohe Alter</h3>
-          <p class="wfp">Es ist nie zu spät damit zu beginnen. Als Babyboomerin möchte ich zeigen: Aktiv bleiben bis ins hohe Alter ist möglich – mit Freude, Sicherheit und echter Lebendigkeit.</p>
-          <div class="wftags">
-            <span class="wftag">Seniorenaktivtraining</span>
-            <span class="wftag">Sturzprophylaxe</span>
-            <span class="wftag">Gedächtnistraining</span>
-            <span class="wftag">Gleichgewicht & Koordination</span>
-            <span class="wftag">Demenzprävention</span>
-          </div>
+    <div class="split rv">
+      <div class="si">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=85&auto=format&fit=crop" alt="Körperliche und geistige Fitness bis ins hohe Alter" style="object-position:center 40%">
+      </div>
+      <div class="sb">
+        <div class="wn">03</div>
+        <h3 class="wh">Körperliche & geistige Fitness<br>bis ins hohe Alter</h3>
+        <p class="wp">Es ist nie zu spät damit zu beginnen. Als Babyboomerin möchte ich zeigen: Aktiv bleiben bis ins hohe Alter ist möglich – mit Freude, Sicherheit und echter Lebendigkeit.</p>
+        <div class="wtags">
+          <span class="wtag">Seniorenaktivtraining</span>
+          <span class="wtag">Sturzprophylaxe</span>
+          <span class="wtag">Gedächtnistraining</span>
+          <span class="wtag">Gleichgewicht & Koordination</span>
+          <span class="wtag">Demenzprävention</span>
+          <span class="wtag">Community</span>
         </div>
-        <a href="#kontakt" class="b-wh">Mehr erfahren</a>
+        <a href="#kontakt" class="wlink">Anfragen →</a>
+        <button class="mehr-toggle" onclick="toggleMehr(this)">Community & mehr <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mehr-content">Gemeinsam ist es leichter – und macht mehr Spaß! Meine Kurse und Trainings bieten nicht nur Bewegung, sondern auch echte Gemeinschaft. Der Austausch mit Gleichgesinnten, gegenseitige Motivation und das Gefühl, dazuzugehören – das ist genauso wertvoll wie das Training selbst. Ob in der Gruppe beim Yoga, beim Schwimmen oder beim Alphalauf: Sie sind nie allein auf diesem Weg.</div>
+      </div>
+    </div>
+    <!-- BGF – Punkt 04 im Angebot -->
+    <div class="split rev rv">
+      <div class="si">
+        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=900&q=85&auto=format&fit=crop" alt="Betriebliche Gesundheitsförderung" style="object-position:center 40%">
+      </div>
+      <div class="sb">
+        <div class="wn">04</div>
+        <h3 class="wh">Betriebliche<br>Gesundheitsförderung</h3>
+        <p class="wp">Gesunde, motivierte Mitarbeiter sind das Kapital jedes Unternehmens. Mit maßgeschneiderten Programmen begleite ich Ihr Team zu mehr Wohlbefinden, Resilienz und Leistungsfähigkeit.</p>
+        <div class="wtags">
+          <span class="wtag">Stressmanagement</span>
+          <span class="wtag">Bewegungsprogramme</span>
+          <span class="wtag">Burnout-Prävention</span>
+          <span class="wtag">Teamcoaching</span>
+          <span class="wtag">Workshops & Seminare</span>
+        </div>
+        <a href="#kontakt" class="wlink">Anfragen →</a>
+        <button class="mehr-toggle" onclick="toggleMehr(this)">Mehr erfahren <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mehr-content">Betriebliche Gesundheitsförderung zahlt sich aus – für Mensch und Unternehmen. Ich entwickle individuelle Programme für Ihr Team: von Bewegungseinheiten und Yoga im Betrieb über Stressmanagement-Workshops bis hin zu systemischem Coaching. Flexibel, praxisnah und auf Ihre Bedürfnisse abgestimmt.</div>
       </div>
     </div>
   </div>
@@ -412,7 +438,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
       <!-- Yoga – ruhige Gruppe in warmem Licht -->
       <div class="kk rv d1">
         <div class="ki">
-          <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=700&q=85&auto=format&fit=crop" alt="Yoga Eggersdorf" style="object-position:center 20%">
+          <img src="../Images/2025-Yoga-Pelikastri.jpg" alt="Yoga-Gruppe Eggersdorf" style="object-position:center 30%">
           <span class="kcat">Yoga</span>
         </div>
         <div class="kb">
@@ -461,11 +487,11 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
   <div class="ueber-grid">
     <div class="portrait-wrap rvl">
       <div class="portrait">
-        <img src="https://www.eli-da.at/eli-da/wp-content/uploads/2025/10/DanielElisabeth-1024x683.jpg" alt="Mag. Elisabeth Daniel">
+        <img src="../Images/Unknown.jpeg" alt="Mag. Elisabeth Daniel">
       </div>
       <div class="pbadge">
         <div class="pbn">Mag. Elisabeth Daniel</div>
-        <div class="pbr">ELI-DA · Graz & Eggersdorf</div>
+        <div class="pbr">ELI-DA · Graz und Graz-Umgebung</div>
       </div>
     </div>
     <div class="rvr">
@@ -493,18 +519,18 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
       <h2 class="sh" style="margin:0">Natur, Bewegung & Lebensfreude</h2>
     </div>
     <div class="gal-grid rv">
-      <!-- Alphalauf Berge, weit und offen -->
-      <div class="gi"><img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=900&q=80&auto=format&fit=crop" alt="Alphalauf" style="object-position:center 35%"></div>
-      <!-- Yoga Pose, natürliches Licht -->
-      <div class="gi"><img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=600&q=80&auto=format&fit=crop" alt="Yoga" style="object-position:center 20%"></div>
-      <!-- Grüner Wald Steiermark -->
-      <div class="gi"><img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=600&q=80&auto=format&fit=crop" alt="Natur Steiermark"></div>
-      <!-- Morgenlicht durch Blätter -->
-      <div class="gi"><img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=600&q=80&auto=format&fit=crop" alt="Morgenlicht"></div>
-      <!-- Aktive Gruppe Bewegung im Freien -->
-      <div class="gi"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900&q=80&auto=format&fit=crop" alt="Bewegung im Freien" style="object-position:center 28%"></div>
-      <!-- Wasser Schwimmen Ruhe -->
-      <div class="gi"><img src="https://images.unsplash.com/photo-1560090995-01632a28895b?w=600&q=80&auto=format&fit=crop" alt="Wasser"></div>
+      <!-- Alphalauf Gruppe in der Natur -->
+      <div class="gi"><img src="../Images/Alphalauf.jpg" alt="Alphalauf Gruppe" style="object-position:center 30%"></div>
+      <!-- Yoga Gruppe Pelikastri -->
+      <div class="gi"><img src="../Images/2025-Yoga-Pelikastri.jpg" alt="Yoga Gruppe" style="object-position:center 30%"></div>
+      <!-- Elisabeth mit Alphalauf Banner -->
+      <div class="gi"><img src="../Images/Unknown-1.jpeg" alt="Elisabeth Daniel – Alphalauf" style="object-position:center 20%"></div>
+      <!-- Erster Schritt – Herbstblätter -->
+      <div class="gi"><img src="../Images/2025_DerersteSchritt.jpg" alt="Der erste Schritt" style="object-position:center 40%"></div>
+      <!-- Elisabeth beim Yoga im Freien -->
+      <div class="gi"><img src="../Images/2025Yoga1.JPG" alt="Yoga im Freien" style="object-position:center 15%"></div>
+      <!-- Elisabeth Portrait in der Natur -->
+      <div class="gi"><img src="../Images/Unknown.jpeg" alt="Elisabeth Daniel" style="object-position:center 20%"></div>
     </div>
   </div>
 </section>
@@ -519,7 +545,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
     <div class="ctad">
       <div class="cdi"><div class="cdl">E-Mail</div><a href="mailto:aktiv@eli-da.at">aktiv@eli-da.at</a></div>
       <div class="cdi"><div class="cdl">Telefon</div><a href="tel:+436641064430">+43 664 106 44 30</a></div>
-      <div class="cdi"><div class="cdl">Standort</div><span>Graz & Eggersdorf bei Graz</span></div>
+      <div class="cdi"><div class="cdl">Standort</div><span>Graz und Graz-Umgebung</span></div>
     </div>
   </div>
 </section>
@@ -577,7 +603,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
       <li><a href="#">Kontakt & Anfahrt</a></li>
     </ul>
   </div>
-  <div class="fcopy">© 2026 Mag. Elisabeth Daniel · ELI-DA · Graz, Österreich · aktiv@eli-da.at · +43 664 106 44 30</div>
+  <div class="fcopy">© 2026 Mag. Elisabeth Daniel · ELI-DA · Graz und Graz-Umgebung · aktiv@eli-da.at · +43 664 106 44 30</div>
 </footer>
 
 <script>
