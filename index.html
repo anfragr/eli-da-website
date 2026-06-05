@@ -65,13 +65,13 @@ h1 em{font-style:italic;color:rgba(255,255,255,.8)}
 .b-red:hover{background:var(--red2);transform:translateY(-2px)}
 .b-ghost{background:transparent;color:rgba(255,255,255,.9);padding:.85rem 2.1rem;border-radius:100px;font-size:.83rem;font-weight:300;letter-spacing:.03em;text-decoration:none;border:1px solid rgba(255,255,255,.38);transition:border-color .2s,background .2s,transform .25s var(--ease);display:inline-block}
 .b-ghost:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);transform:translateY(-2px)}
-.trust{display:flex;gap:1.6rem;margin-top:3rem;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.12);flex-wrap:wrap}
-.ti{font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.48);display:flex;align-items:center;gap:.45rem}
-.ti::before{content:'';width:4px;height:4px;border-radius:50%;background:rgba(200,215,80,.8);flex-shrink:0}
-.scroll-h{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:.4rem;opacity:.4;animation:bob 2.5s ease-in-out infinite}
+.trust{display:flex;gap:1.6rem;margin-top:3rem;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.35);flex-wrap:wrap}
+.ti{font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:.45rem;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.ti::before{content:'';width:5px;height:5px;border-radius:50%;background:rgba(200,215,80,1);flex-shrink:0}
+.scroll-h{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:.4rem;opacity:.75;animation:bob 2.5s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
-.scroll-h span{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.9)}
-.scroll-h svg{width:14px;height:14px;stroke:rgba(255,255,255,.8);stroke-width:1.5;fill:none}
+.scroll-h span{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;font-weight:500;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+.scroll-h svg{width:16px;height:16px;stroke:#fff;stroke-width:2;fill:none;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))}
 
 /* ZITAT */
 #zitat{background:#fff;padding:clamp(3.5rem,7vw,7rem) clamp(1.5rem,5vw,3rem);position:relative;overflow:hidden}
@@ -384,27 +384,6 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
         <a href="#kontakt" class="wlink">Anfragen →</a>
         <button class="mehr-toggle" onclick="toggleMehr(this)">Community & mehr <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="mehr-content">Gemeinsam ist es leichter – und macht mehr Spaß! Meine Kurse und Trainings bieten nicht nur Bewegung, sondern auch echte Gemeinschaft. Der Austausch mit Gleichgesinnten, gegenseitige Motivation und das Gefühl, dazuzugehören – das ist genauso wertvoll wie das Training selbst. Ob in der Gruppe beim Yoga, beim Schwimmen oder beim Alphalauf: Sie sind nie allein auf diesem Weg.</div>
-      </div>
-    </div>
-    <!-- BGF – Punkt 04 im Angebot -->
-    <div class="split rev rv">
-      <div class="si">
-        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=900&q=85&auto=format&fit=crop" alt="Betriebliche Gesundheitsförderung" style="object-position:center 40%">
-      </div>
-      <div class="sb">
-        <div class="wn">04</div>
-        <h3 class="wh">Betriebliche<br>Gesundheitsförderung</h3>
-        <p class="wp">Gesunde, motivierte Mitarbeiter sind das Kapital jedes Unternehmens. Mit maßgeschneiderten Programmen begleite ich Ihr Team zu mehr Wohlbefinden, Resilienz und Leistungsfähigkeit.</p>
-        <div class="wtags">
-          <span class="wtag">Stressmanagement</span>
-          <span class="wtag">Bewegungsprogramme</span>
-          <span class="wtag">Burnout-Prävention</span>
-          <span class="wtag">Teamcoaching</span>
-          <span class="wtag">Workshops & Seminare</span>
-        </div>
-        <a href="#kontakt" class="wlink">Anfragen →</a>
-        <button class="mehr-toggle" onclick="toggleMehr(this)">Mehr erfahren <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="mehr-content">Betriebliche Gesundheitsförderung zahlt sich aus – für Mensch und Unternehmen. Ich entwickle individuelle Programme für Ihr Team: von Bewegungseinheiten und Yoga im Betrieb über Stressmanagement-Workshops bis hin zu systemischem Coaching. Flexibel, praxisnah und auf Ihre Bedürfnisse abgestimmt.</div>
       </div>
     </div>
   </div>
