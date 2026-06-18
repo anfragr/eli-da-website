@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum – ELI-DA | Mag. Elisabeth Daniel</title>
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#ad1a3b;--red2:#94203b;
+  --green:#aaab30;--green2:#8a8b20;
+  --cream:#faf8f0;--sand:#f0ead8;--white:#fff;
+  --text:#1e1e1e;--text-m:#3a3a3a;--text-s:#6a6a6a;--border:#e0d8c8;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:var(--text);background:var(--cream);line-height:1.75;font-weight:300}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;height:66px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(1rem,4vw,2.5rem);
+  background:rgba(250,248,240,.97);
+  box-shadow:0 1px 0 rgba(0,0,0,.07);
+  backdrop-filter:blur(14px);
+}
+.logo{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:var(--red);letter-spacing:.04em;text-decoration:none;line-height:1;display:flex;flex-direction:column}
+.logo-sub{font-family:var(--sans);font-size:.55rem;font-weight:300;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-top:3px}
+.nav-back{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:400;letter-spacing:.05em;color:var(--text-s);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--red)}
+.nav-back svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
+
+/* HERO BAND */
+.page-hero{
+  background:var(--red);
+  padding:clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,3rem) clamp(2.5rem,5vw,4rem);
+  position:relative;overflow:hidden;
+}
+.page-hero::before{
+  content:'';position:absolute;right:-80px;top:-80px;
+  width:320px;height:320px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.08);
+}
+.page-hero::after{
+  content:'';position:absolute;right:80px;bottom:-60px;
+  width:200px;height:200px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.05);
+}
+.page-hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1}
+.page-eyebrow{font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:.75rem;display:block}
+.page-title{font-family:var(--serif);font-size:clamp(2rem,5vw,3.5rem);font-weight:300;color:#fff;line-height:1.15;margin-bottom:.5rem}
+.page-subtitle{font-size:.9rem;color:rgba(255,255,255,.6);font-weight:300}
+
+/* CONTENT */
+.content-wrap{max-width:900px;margin:0 auto;padding:clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,3rem)}
+
+/* SECTION BLOCKS */
+.imp-section{
+  background:var(--white);
+  border-radius:14px;
+  border:1px solid var(--border);
+  padding:2rem 2.25rem;
+  margin-bottom:1.25rem;
+}
+.imp-section-title{
+  font-family:var(--serif);font-size:1.2rem;font-weight:400;
+  color:var(--text);margin-bottom:1.25rem;
+  padding-bottom:.75rem;
+  border-bottom:2px solid var(--green);
+  display:flex;align-items:center;gap:.6rem;
+}
+.imp-section-title svg{width:18px;height:18px;stroke:var(--green);fill:none;stroke-width:1.5;flex-shrink:0}
+
+/* GRID für 2-spaltig */
+.imp-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.imp-item{display:flex;flex-direction:column;gap:.2rem}
+.imp-label{font-size:.68rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-s)}
+.imp-value{font-size:.9rem;color:var(--text-m);font-weight:300;line-height:1.6}
+.imp-value a{color:var(--red);text-decoration:none;transition:color .2s}
+.imp-value a:hover{color:var(--red2);text-decoration:underline}
+.imp-value strong{font-weight:500;color:var(--text)}
+
+/* SINGLE ROW items */
+.imp-row{
+  display:flex;gap:1rem;align-items:flex-start;
+  padding:.75rem 0;border-bottom:1px solid var(--border);
+}
+.imp-row:last-child{border-bottom:none;padding-bottom:0}
+.imp-row-label{font-size:.72rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--text-s);min-width:200px;flex-shrink:0;padding-top:.1rem}
+.imp-row-val{font-size:.9rem;color:var(--text-m);font-weight:300;line-height:1.65}
+.imp-row-val a{color:var(--red);text-decoration:none}
+.imp-row-val a:hover{text-decoration:underline}
+
+/* HIGHLIGHT BOX */
+.imp-highlight{
+  background:var(--sand);
+  border-radius:10px;
+  padding:1.25rem 1.5rem;
+  margin-bottom:1.25rem;
+  border:1px solid var(--border);
+  font-size:.88rem;color:var(--text-m);line-height:1.75;
+}
+.imp-highlight strong{color:var(--text);font-weight:500}
+
+/* IBAN */
+.iban-block{
+  background:var(--cream);border-radius:8px;
+  padding:.85rem 1.1rem;
+  font-family:monospace;font-size:.88rem;
+  color:var(--text-m);letter-spacing:.04em;
+  border:1px solid var(--border);
+  display:inline-block;margin-top:.4rem;
+}
+
+/* NOTE */
+.note-box{
+  background:rgba(170,171,48,.08);
+  border:1px solid rgba(170,171,48,.3);
+  border-radius:10px;padding:1rem 1.25rem;
+  font-size:.82rem;color:var(--green2);
+  line-height:1.7;margin-top:1.25rem;
+  display:flex;align-items:flex-start;gap:.6rem;
+}
+.note-box svg{width:16px;height:16px;stroke:var(--green2);fill:none;stroke-width:1.5;flex-shrink:0;margin-top:.15rem}
+
+/* DIVIDER */
+.div{height:1px;background:var(--border);margin:1.5rem 0}
+
+/* FOOTER */
+footer{background:var(--text);padding:clamp(2rem,4vw,3rem) clamp(1.5rem,5vw,3rem)}
+.ft{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.25rem}
+.flogo{font-family:var(--serif);font-size:1.1rem;color:rgba(255,255,255,.6);font-weight:300;text-decoration:none}
+.flinks{display:flex;gap:1.5rem;list-style:none}
+.flinks a{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s}
+.flinks a:hover{color:rgba(255,255,255,.55)}
+.fcopy{max-width:900px;margin:.1rem auto 0;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.05);text-align:center;font-size:.67rem;color:rgba(255,255,255,.18)}
+
+@media(max-width:700px){
+  .imp-grid{grid-template-columns:1fr}
+  .imp-row{flex-direction:column;gap:.25rem}
+  .imp-row-label{min-width:auto}
+  .ft{flex-direction:column;text-align:center}
+  .flinks{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">ELI-DA<span class="logo-sub">Elisabeth Daniel</span></a>
+  <a href="index.html" class="nav-back">
+    <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Zurück zur Website
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-eyebrow">Rechtliches</span>
+    <h1 class="page-title">Impressum &<br>Offenlegung</h1>
+    <p class="page-subtitle">Gemäß § 25 Mediengesetz</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-wrap">
+
+  <!-- Medieninhaberin -->
+  <div class="imp-section">
+    <h2 class="imp-section-title">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      Medieninhaberin & Verantwortliche
+    </h2>
+    <div class="imp-grid">
+      <div class="imp-item">
+        <span class="imp-label">Name</span>
+        <span class="imp-value"><strong>Mag. Elisabeth Daniel</strong><br>FITNESS für Körper & Geist</span>
+      </div>
+      <div class="imp-item">
+        <span class="imp-label">Adresse</span>
+        <span class="imp-value">Diepoltsberger Straße 15/1<br>8061 St. Radegund bei Graz<br>Österreich</span>
+      </div>
+      <div class="imp-item">
+        <span class="imp-label">Telefon</span>
+        <span class="imp-value"><a href="tel:+436641064430">+43 664 1064430</a></span>
+      </div>
+      <div class="imp-item">
+        <span class="imp-label">E-Mail</span>
+        <span class="imp-value"><a href="mailto:aktiv@eli-da.at">aktiv@eli-da.at</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gewerbeangaben -->
+  <div class="imp-section">
+    <h2 class="imp-section-title">
+      <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+      Gewerbeangaben
+    </h2>
+    <div class="imp-row">
+      <span class="imp-row-label">Gewerbeberechtigte Person</span>
+      <span class="imp-row-val"><strong>Elisabeth Daniel</strong></span>
+    </div>
+    <div class="imp-row">
+      <span class="imp-row-label">GISA-Zahl</span>
+      <span class="imp-row-val">27568781</span>
+    </div>
+    <div class="imp-row">
+      <span class="imp-row-label">Gewerbe</span>
+      <span class="imp-row-val">Lebens- und Sozialberatung, ausgenommen Ernährungsberatung und sportwissenschaftliche Beratung</span>
+    </div>
+    <div class="imp-row">
+      <span class="imp-row-label">Gewerbebehörde</span>
+      <span class="imp-row-val">Bezirkshauptmannschaft Graz-Umgebung</span>
+    </div>
+    <div class="imp-row">
+      <span class="imp-row-label">Gewerbeberechtigung seit</span>
+      <span class="imp-row-val">01.05.2015</span>
+    </div>
+    <div class="imp-row">
+      <span class="imp-row-label">Mitgliedschaft</span>
+      <span class="imp-row-val">Wirtschaftskammer Steiermark</span>
+    </div>
+    <div class="imp-row">
+      <span class="imp-row-label">Anwendbare Rechtsvorschriften</span>
+      <span class="imp-row-val">Gewerbeordnung 1994, abrufbar unter <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener">www.ris.bka.gv.at</a></span>
+    </div>
+  </div>
+
+  <!-- Unternehmensgegenstand & Website -->
+  <div class="imp-section">
+    <h2 class="imp-section-title">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>
+      Unternehmensgegenstand & Website
+    </h2>
+    <div class="imp-row">
+      <span class="imp-row-label">Unternehmensgegenstand</span>
+      <span class="imp-row-val">Lebens- und Sozialberatung sowie Angebote für Fitness, Körper und Geist.</span>
+    </div>
+    <div class="imp-row">
+      <span class="imp-row-label">Grundlegende Richtung der Website</span>
+      <span class="imp-row-val">Diese Website informiert über Angebote, Kurse, Leistungen und Veranstaltungen von FITNESS für Körper & Geist / Mag. Elisabeth Daniel.</span>
+    </div>
+  </div>
+
+  <!-- Bankverbindung -->
+  <div class="imp-section">
+    <h2 class="imp-section-title">
+      <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+      Bankverbindung
+    </h2>
+    <div class="imp-grid">
+      <div class="imp-item">
+        <span class="imp-label">Bank</span>
+        <span class="imp-value">Raiffeisenbank Eggersdorf</span>
+      </div>
+      <div class="imp-item">
+        <span class="imp-label">BIC</span>
+        <span class="imp-value">RZSTAT2G252</span>
+      </div>
+      <div class="imp-item" style="grid-column:1/-1">
+        <span class="imp-label">IBAN</span>
+        <div class="iban-block">AT54 3825 2000 0405 0290</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Urheberrecht -->
+  <div class="imp-section">
+    <h2 class="imp-section-title">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.83 14.83A4 4 0 1 1 9.17 9.17"/></svg>
+      Urheberrecht
+    </h2>
+    <p style="font-size:.9rem;color:var(--text-m);line-height:1.8;margin-bottom:1rem">
+      Alle auf dieser Website präsentierten Texte und grafischen Elemente unterliegen dem Urheberrecht.
+      Die Rechte zur Vervielfältigung und Verbreitung, in welcher Form auch immer, liegen ausschließlich
+      beim jeweiligen Urheber. Die hier wiedergegebenen Informationen dürfen ohne Zustimmung nicht
+      anderweitig verwendet werden.
+    </p>
+    <div class="div"></div>
+    <div class="imp-row">
+      <span class="imp-row-label">Bildnachweis Titelbild</span>
+      <span class="imp-row-val">Copyright Andrey Volokhatiuk</span>
+    </div>
+  </div>
+
+  <!-- Credits -->
+  <div class="imp-section">
+    <h2 class="imp-section-title">
+      <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      Umsetzung & Credits
+    </h2>
+    <div class="imp-grid">
+      <div class="imp-item">
+        <span class="imp-label">Design</span>
+        <span class="imp-value"><a href="https://www.nicole-praus.com" target="_blank" rel="noopener">www.nicole-praus.com</a></span>
+      </div>
+      <div class="imp-item">
+        <span class="imp-label">Webprogrammierung</span>
+        <span class="imp-value"><a href="https://www.patricklengauer.info" target="_blank" rel="noopener">www.patricklengauer.info</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hinweis -->
+  <div class="note-box">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    <span>Diese Website dient ausschließlich Informationszwecken. Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.</span>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <a href="index.html" class="flogo">ELI-DA · Mag. Elisabeth Daniel</a>
+    <ul class="flinks">
+      <li><a href="impressum.html">Impressum</a></li>
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+      <li><a href="index.html#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+  <div class="fcopy">© 2026 Mag. Elisabeth Daniel · ELI-DA · aktiv@eli-da.at · +43 664 1064430</div>
+</footer>
+
+</body>
+</html>
