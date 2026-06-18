@@ -59,67 +59,51 @@ body{font-family:var(--sans);color:var(--text);background:var(--cream);line-heig
 .hero-label::before{content:'';width:24px;height:1px;background:rgba(255,255,255,.45)}
 h1{font-family:var(--serif);font-size:clamp(3rem,6.8vw,6rem);font-weight:300;line-height:1.07;letter-spacing:-.02em;color:#fff;margin-bottom:1.35rem;max-width:780px}
 h1 em{font-style:italic;color:rgba(255,255,255,.8)}
-.hero-sub{font-size:clamp(.92rem,1.5vw,1.08rem);font-weight:300;color:rgba(255,255,255,.72);max-width:480px;line-height:1.85;margin-bottom:2.5rem}
+.hero-sub{font-size:clamp(.92rem,1.5vw,1.08rem);font-weight:300;color:rgba(255,255,255,.72);max-width:500px;line-height:1.85;margin-bottom:2.5rem}
 .brow{display:flex;gap:.85rem;flex-wrap:wrap}
 .b-red{background:var(--red);color:#fff;padding:.85rem 2.1rem;border-radius:100px;font-size:.83rem;font-weight:500;letter-spacing:.03em;text-decoration:none;transition:background .2s,transform .25s var(--ease);display:inline-block}
 .b-red:hover{background:var(--red2);transform:translateY(-2px)}
 .b-ghost{background:transparent;color:rgba(255,255,255,.9);padding:.85rem 2.1rem;border-radius:100px;font-size:.83rem;font-weight:300;letter-spacing:.03em;text-decoration:none;border:1px solid rgba(255,255,255,.38);transition:border-color .2s,background .2s,transform .25s var(--ease);display:inline-block}
 .b-ghost:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);transform:translateY(-2px)}
-.trust{display:flex;gap:1.6rem;margin-top:3rem;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.12);flex-wrap:wrap}
-.ti{font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.48);display:flex;align-items:center;gap:.45rem}
-.ti::before{content:'';width:4px;height:4px;border-radius:50%;background:rgba(200,215,80,.8);flex-shrink:0}
-.ti.highlight{color:rgba(255,235,200,.92);font-weight:500}
-.ti.highlight::before{background:var(--red);width:5px;height:5px}
-.scroll-h{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:.4rem;opacity:.4;animation:bob 2.5s ease-in-out infinite}
+.trust{display:flex;gap:1.6rem;margin-top:3rem;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.35);flex-wrap:wrap}
+.ti{font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:.45rem;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.ti::before{content:'';width:5px;height:5px;border-radius:50%;background:rgba(200,215,80,1);flex-shrink:0}
+.scroll-h{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:.4rem;opacity:.75;animation:bob 2.5s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
-.scroll-h span{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.9)}
-.scroll-h svg{width:14px;height:14px;stroke:rgba(255,255,255,.8);stroke-width:1.5;fill:none}
+.scroll-h span{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;font-weight:500;text-shadow:0 1px 4px rgba(0,0,0,.5)}
+.scroll-h svg{width:16px;height:16px;stroke:#fff;stroke-width:2;fill:none;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))}
 
-/* MISSION STATEMENT */
-#mission{
-  background:var(--text);
-  padding:clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,3rem);
-  position:relative;overflow:hidden;text-align:center;
-}
-#mission::before{
-  content:'';position:absolute;top:-30%;left:50%;transform:translateX(-50%);
-  width:120%;aspect-ratio:1;border-radius:50%;
-  background:radial-gradient(circle,rgba(170,171,48,.08) 0%,transparent 65%);
-}
-.mission-inner{max-width:780px;margin:0 auto;position:relative;z-index:1}
-.mission-label{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.5rem;display:block}
-.mission-text{
-  font-family:var(--serif);font-weight:300;font-style:italic;
-  font-size:clamp(1.15rem,2.2vw,1.6rem);line-height:1.75;
-  color:rgba(255,255,255,.92);
-}
-.mission-text b{font-style:normal;font-weight:500;color:var(--green)}
-.mission-sig{margin-top:2rem;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+/* ZITAT */
+#zitat{background:#fff;padding:clamp(3.5rem,7vw,7rem) clamp(1.5rem,5vw,3rem);position:relative;overflow:hidden}
+#zitat::before{content:'„';position:absolute;top:-3rem;left:clamp(1rem,5vw,4rem);font-family:var(--serif);font-size:22rem;font-weight:300;color:rgba(170,171,48,.06);line-height:1;pointer-events:none}
+.zitat-inner{max-width:820px;margin:0 auto;text-align:center;position:relative}
+.z-label{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:1.5rem}
+blockquote{font-family:var(--serif);font-size:clamp(1.05rem,1.8vw,1.3rem);font-weight:300;font-style:italic;color:var(--text-m);line-height:1.9;margin-bottom:1.1rem;padding:0 clamp(.5rem,3vw,2.5rem)}
+.z-src{font-size:.78rem;color:var(--text-s)}
+.z-pers{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border);font-family:var(--serif);font-size:1rem;font-style:italic;color:var(--text-m);line-height:1.85}
+.z-pers strong{color:var(--red);font-style:normal;font-weight:500}
 
-/* ZITAT/INTRO PHOTO (ohne Zitat) */
-#zitat{background:#fff;padding:clamp(3.5rem,7vw,6rem) clamp(1.5rem,5vw,3rem)}
-.zitat-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,7rem);align-items:center}
-.zitat-img{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:5/4}
-.zitat-img img{width:100%;height:100%;object-fit:cover}
+/* INTRO */
+#intro{background:var(--cream);padding:clamp(4rem,8vw,8rem) clamp(1.5rem,5vw,3rem)}
+.intro-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,8rem);align-items:center}
+.intro-img-wrap{position:relative;border-radius:40% 60% 55% 45% / 45% 40% 60% 55%;overflow:hidden;aspect-ratio:4/5}
+.intro-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.intro-float{position:absolute;bottom:1.75rem;right:-1.5rem;background:#fff;border-radius:12px;padding:1.1rem 1.4rem;border:1px solid var(--border);box-shadow:0 8px 36px rgba(0,0,0,.1);max-width:200px}
+.if-q{font-family:var(--serif);font-size:.88rem;font-style:italic;color:var(--text-m);line-height:1.55;margin-bottom:.25rem}
+.if-s{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green2)}
 .ey{display:block;font-size:.67rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:.75rem}
-.sh{font-family:var(--serif);font-size:clamp(1.6rem,2.8vw,2.5rem);font-weight:300;line-height:1.22;color:var(--text);margin-bottom:1.25rem}
+.sh{font-family:var(--serif);font-size:clamp(1.6rem,2.8vw,2.5rem);font-weight:300;line-height:1.22;color:var(--text);margin-bottom:1.35rem}
 .sp{font-size:.95rem;font-weight:300;color:var(--text-m);line-height:1.9;max-width:480px}
-.mehr-toggle{display:inline-flex;align-items:center;gap:.45rem;font-size:.78rem;font-weight:500;color:var(--green2);cursor:pointer;border:none;background:none;letter-spacing:.04em;margin-top:.9rem;transition:color .2s;padding:0}
-.mehr-toggle:hover{color:var(--green)}
-.mehr-toggle svg{width:13px;height:13px;transition:transform .3s;stroke:currentColor;fill:none;stroke-width:2}
-.mehr-toggle.open svg{transform:rotate(180deg)}
-.mehr-content{display:none;margin-top:.9rem;padding-top:.9rem;border-top:1px dashed var(--border);font-size:.9rem;font-weight:300;color:var(--text-m);line-height:1.9;max-width:480px}
-.mehr-content.open{display:block}
 
 /* ANGEBOTE */
-#wege{background:var(--cream);padding:clamp(4rem,8vw,8rem) clamp(1.5rem,5vw,3rem)}
+#wege{background:#fff;padding:clamp(4rem,8vw,8rem) clamp(1.5rem,5vw,3rem)}
 .wege-head{text-align:center;margin-bottom:clamp(3rem,5vw,5rem)}
 .split{display:grid;grid-template-columns:1fr 1fr;min-height:540px;border-radius:20px;overflow:hidden;margin-bottom:2rem;box-shadow:0 4px 40px rgba(0,0,0,.08)}
 .split.rev .si{order:2}.split.rev .sb{order:1}
 .si{position:relative;overflow:hidden;min-height:380px}
 .si img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .8s var(--ease)}
 .split:hover .si img{transform:scale(1.04)}
-.sb{background:#fff;padding:clamp(2.5rem,4.5vw,4.5rem) clamp(2rem,4vw,4rem);display:flex;flex-direction:column;justify-content:center}
+.sb{background:var(--cream);padding:clamp(2.5rem,4.5vw,4.5rem) clamp(2rem,4vw,4rem);display:flex;flex-direction:column;justify-content:center}
 .wn{font-family:var(--serif);font-size:5rem;font-weight:300;color:var(--border);line-height:1;margin-bottom:.35rem}
 .wh{font-family:var(--serif);font-size:clamp(1.35rem,2.2vw,1.9rem);font-weight:400;color:var(--text);margin-bottom:.8rem;line-height:1.2}
 .wp{font-size:.88rem;font-weight:300;color:var(--text-m);line-height:1.88;margin-bottom:1.35rem;max-width:400px}
@@ -127,6 +111,12 @@ h1 em{font-style:italic;color:rgba(255,255,255,.8)}
 .wtag{font-size:.66rem;letter-spacing:.03em;background:rgba(170,171,48,.13);color:var(--green2);padding:.2rem .65rem;border-radius:100px;font-weight:400}
 .wlink{font-size:.78rem;font-weight:500;letter-spacing:.05em;color:var(--red);text-decoration:none;display:inline-flex;align-items:center;gap:.38rem;transition:gap .2s}
 .wlink:hover{gap:.65rem}
+.mehr-toggle{display:inline-flex;align-items:center;gap:.45rem;font-size:.75rem;font-weight:500;color:var(--green2);cursor:pointer;border:none;background:none;letter-spacing:.04em;margin-top:.5rem;transition:color .2s;padding:0}
+.mehr-toggle:hover{color:var(--green)}
+.mehr-toggle svg{width:13px;height:13px;transition:transform .3s;stroke:currentColor;fill:none;stroke-width:2}
+.mehr-toggle.open svg{transform:rotate(180deg)}
+.mehr-content{display:none;margin-top:.8rem;padding-top:.8rem;border-top:1px dashed var(--border);font-size:.83rem;font-weight:300;color:var(--text-m);line-height:1.85}
+.mehr-content.open{display:block}
 .wfull{position:relative;border-radius:20px;overflow:hidden;min-height:440px;display:flex;align-items:flex-end;box-shadow:0 4px 40px rgba(0,0,0,.08)}
 .wfull img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;transition:transform .8s var(--ease)}
 .wfull:hover img{transform:scale(1.03)}
@@ -141,38 +131,6 @@ h1 em{font-style:italic;color:rgba(255,255,255,.8)}
 .b-wh{background:#fff;color:var(--red);padding:.75rem 1.85rem;border-radius:100px;font-size:.8rem;font-weight:500;letter-spacing:.03em;text-decoration:none;display:inline-block;align-self:flex-end;white-space:nowrap;transition:background .2s,transform .25s var(--ease);flex-shrink:0}
 .b-wh:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.18)}
 
-/* COMMUNITY */
-#community{background:#fff;padding:clamp(4rem,7vw,7rem) clamp(1.5rem,5vw,3rem)}
-.community-c{max-width:1200px;margin:0 auto}
-.community-top{text-align:center;margin-bottom:clamp(2.5rem,5vw,4rem)}
-.community-slogan{
-  display:inline-block;margin-top:.85rem;
-  font-family:var(--serif);font-style:italic;font-size:1.05rem;
-  color:var(--green2);border:1px dashed var(--border);
-  padding:.5rem 1.25rem;border-radius:100px;
-}
-.cg{display:grid;grid-template-columns:repeat(4,1fr);gap:1.1rem}
-.cc{background:var(--cream);border-radius:16px;overflow:hidden;border:1px solid var(--border);transition:transform .3s var(--ease),box-shadow .3s}
-.cc:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(0,0,0,.09)}
-.cc-img{height:140px;position:relative;overflow:hidden}
-.cc-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
-.cc:hover .cc-img img{transform:scale(1.07)}
-.cc-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.2))}
-.cc-badge{position:absolute;top:.7rem;left:.7rem;background:rgba(255,255,255,.92);font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green2);padding:.22rem .6rem;border-radius:100px;z-index:1}
-.cc-body{padding:1.1rem 1.15rem 1.3rem}
-.cc-h{font-family:var(--serif);font-size:1.05rem;font-weight:400;color:var(--text);margin-bottom:.3rem}
-.cc-p{font-size:.78rem;font-weight:300;color:var(--text-s);line-height:1.65}
-/* placeholder cards */
-.cc.placeholder{
-  display:flex;align-items:center;justify-content:center;
-  min-height:248px;border:1.5px dashed var(--border);
-  background:transparent;
-}
-.cc.placeholder:hover{transform:none;box-shadow:none;border-color:var(--green)}
-.cc-ph-inner{text-align:center;padding:1.5rem}
-.cc-ph-inner svg{width:28px;height:28px;stroke:var(--border);fill:none;stroke-width:1.5;margin-bottom:.6rem}
-.cc-ph-inner p{font-size:.78rem;color:var(--text-s);font-style:italic;line-height:1.6}
-
 /* BGF */
 #bgf{background:var(--green);padding:clamp(2.5rem,5vw,4.5rem) clamp(1.5rem,5vw,3rem);position:relative;overflow:hidden}
 .bgf-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:.18;background-image:url('https://images.unsplash.com/photo-1552581234-26160f608093?w=1400&q=70&auto=format&fit=crop')}
@@ -186,20 +144,26 @@ h1 em{font-style:italic;color:rgba(255,255,255,.8)}
 .b-gout{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5);padding:.78rem 1.85rem;border-radius:100px;font-size:.8rem;font-weight:500;text-decoration:none;display:inline-block;white-space:nowrap;transition:background .2s,border-color .2s;flex-shrink:0}
 .b-gout:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.8)}
 
-/* GALERIE */
-#galerie{background:var(--cream);padding:clamp(3rem,5vw,5rem) clamp(1.5rem,5vw,3rem)}
-.gal-inner{max-width:1200px;margin:0 auto}
-.gal-top{text-align:center;margin-bottom:2rem}
-.gal-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:210px 210px;gap:.85rem;border-radius:14px;overflow:hidden}
-.gi{overflow:hidden;position:relative;cursor:pointer}
-.gi img{width:100%;height:100%;object-fit:cover;transition:transform .65s var(--ease)}
-.gi:hover img{transform:scale(1.07)}
-.gi:nth-child(1){grid-column:1/3;grid-row:1/2}
-.gi:nth-child(2){grid-column:3/4;grid-row:1/2}
-.gi:nth-child(3){grid-column:4/5;grid-row:1/2}
-.gi:nth-child(4){grid-column:1/2;grid-row:2/3}
-.gi:nth-child(5){grid-column:2/4;grid-row:2/3}
-.gi:nth-child(6){grid-column:4/5;grid-row:2/3}
+/* KURSE */
+#kurse{background:var(--cream);padding:clamp(4rem,7vw,7rem) clamp(1.5rem,5vw,3rem)}
+.kurse-c{max-width:1200px;margin:0 auto}
+.kurse-top{text-align:center;margin-bottom:clamp(2.5rem,5vw,4.5rem)}
+.kg{display:grid;grid-template-columns:repeat(3,1fr);gap:1.35rem}
+.kk{background:#fff;border-radius:16px;overflow:hidden;border:1px solid var(--border);transition:transform .3s var(--ease),box-shadow .3s}
+.kk:hover{transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,.1)}
+.ki{height:200px;position:relative;overflow:hidden}
+.ki img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
+.kk:hover .ki img{transform:scale(1.06)}
+.ki::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.22))}
+.kcat{position:absolute;top:.85rem;left:.85rem;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);font-size:.63rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--red);padding:.25rem .72rem;border-radius:100px;z-index:1}
+.kb{padding:1.35rem 1.4rem 1.6rem}
+.kh{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--text);margin-bottom:.22rem}
+.kloc{font-size:.76rem;color:var(--text-s);margin-bottom:.75rem}
+.ktime{display:inline-flex;align-items:center;gap:.38rem;background:rgba(170,171,48,.13);color:var(--green2);font-size:.72rem;font-weight:500;padding:.3rem .8rem;border-radius:100px;margin-bottom:.75rem}
+.ktime svg{width:11px;height:11px;flex-shrink:0;stroke:currentColor;fill:none;stroke-width:2}
+.kp{font-size:.82rem;font-weight:300;color:var(--text-s);line-height:1.7;margin-bottom:1rem}
+.b-kk{background:transparent;color:var(--red);border:1px solid var(--red);padding:.48rem 1.2rem;border-radius:100px;font-size:.75rem;font-weight:500;text-decoration:none;display:inline-block;transition:background .2s,color .2s}
+.b-kk:hover{background:var(--red);color:#fff}
 
 /* ÜBER MICH */
 #ueber{background:#fff;padding:clamp(4rem,8vw,8rem) clamp(1.5rem,5vw,3rem)}
@@ -211,14 +175,30 @@ h1 em{font-style:italic;color:rgba(255,255,255,.8)}
 .pbn{font-family:var(--serif);font-size:1rem;color:var(--text);font-weight:400}
 .pbr{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-top:.2rem}
 .ue-h{font-family:var(--serif);font-size:clamp(1.4rem,2.2vw,2.1rem);font-weight:300;line-height:1.25;color:var(--text);margin-bottom:1.2rem}
-.ue-p{font-size:.93rem;font-weight:300;color:var(--text-m);line-height:1.95;margin-bottom:.9rem;max-width:520px}
-.ue-p b{color:var(--red);font-weight:500}
-.b-sage{background:var(--green);color:#fff;padding:.82rem 2rem;border-radius:100px;font-size:.82rem;font-weight:500;letter-spacing:.03em;text-decoration:none;display:inline-block;transition:background .2s,transform .25s var(--ease);margin-top:.5rem}
+.ue-p{font-size:.93rem;font-weight:300;color:var(--text-m);line-height:1.95;margin-bottom:.9rem;max-width:500px}
+.quals{border-left:3px solid rgba(170,171,48,.35);padding-left:1.2rem;margin:1.6rem 0 1.85rem;display:flex;flex-direction:column;gap:.38rem}
+.quals span{font-size:.82rem;color:var(--text-m);font-weight:300}
+.b-sage{background:var(--green);color:#fff;padding:.82rem 2rem;border-radius:100px;font-size:.82rem;font-weight:500;letter-spacing:.03em;text-decoration:none;display:inline-block;transition:background .2s,transform .25s var(--ease)}
 .b-sage:hover{background:var(--green2);transform:translateY(-2px)}
+
+/* GALERIE */
+#galerie{background:var(--cream);padding:clamp(3rem,5vw,5rem) clamp(1.5rem,5vw,3rem)}
+.gal-inner{max-width:1200px;margin:0 auto}
+.gal-top{text-align:center;margin-bottom:2rem}
+.gal-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;grid-template-rows:300px 300px;gap:.85rem;border-radius:14px;overflow:hidden}
+.gi{overflow:hidden;position:relative;cursor:pointer}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform .65s var(--ease)}
+.gi:hover img{transform:scale(1.07)}
+.gi:nth-child(1){grid-column:1/3;grid-row:1/2}
+.gi:nth-child(2){grid-column:3/4;grid-row:1/2}
+.gi:nth-child(3){grid-column:4/5;grid-row:1/2}
+.gi:nth-child(4){grid-column:1/2;grid-row:2/3}
+.gi:nth-child(5){grid-column:2/4;grid-row:2/3}
+.gi:nth-child(6){grid-column:4/5;grid-row:2/3}
 
 /* CTA */
 #cta{position:relative;overflow:hidden;min-height:540px;display:flex;align-items:center;justify-content:center;padding:clamp(4.5rem,9vw,9rem) clamp(1.5rem,5vw,3rem);text-align:center}
-.cta-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=85&auto=format&fit=crop')}
+.cta-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center 60%;background-image:url('../Images/2025_DerersteSchritt.jpg')}
 .cta-bg::after{content:'';position:absolute;inset:0;background:rgba(10,6,6,.62)}
 .cta-c{position:relative;z-index:1;max-width:640px}
 .cta-h{font-family:var(--serif);font-size:clamp(2rem,5vw,4rem);font-weight:300;color:#fff;line-height:1.12;letter-spacing:-.02em;margin-bottom:1.1rem}
@@ -255,18 +235,9 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
 .flinks a:hover{color:rgba(255,255,255,.58)}
 .fcopy{max-width:1200px;margin:.1rem auto 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.05);text-align:center;font-size:.67rem;color:rgba(255,255,255,.18)}
 
-/* NOTE BANNER */
-.note{
-  background:var(--green-pale);border:1px dashed var(--green);
-  border-radius:10px;padding:.65rem 1rem;
-  font-size:.74rem;color:var(--green2);
-  margin-bottom:1.25rem;display:inline-flex;align-items:center;gap:.5rem;
-}
-
-@media(max-width:1050px){.ueber-grid{grid-template-columns:1fr;max-width:580px}.pbadge{right:0}.gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.gi:nth-child(n){grid-column:auto;grid-row:auto;height:200px}.cg{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:900px){.nl{display:none}.ham{display:flex}.zitat-grid{grid-template-columns:1fr;gap:2.5rem}.split{grid-template-columns:1fr}.split.rev .si,.split.rev .sb{order:unset}.si{min-height:260px}.ft{flex-direction:column;text-align:center}.flinks{justify-content:center}.bgf-inner{gap:1.5rem}}
-@media(max-width:600px){.brow{flex-direction:column}.brow a{text-align:center}.trust{gap:1.1rem}.wfull-body{flex-direction:column;gap:1.25rem}.ctad{flex-direction:column;align-items:center;gap:1.25rem}.form-grid{grid-template-columns:1fr}.gal-grid{grid-template-columns:1fr 1fr}.cg{grid-template-columns:1fr 1fr}}
-@media(max-width:460px){.cg{grid-template-columns:1fr}}
+@media(max-width:1050px){.ueber-grid{grid-template-columns:1fr;max-width:580px}.pbadge{right:0}.gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.gi:nth-child(n){grid-column:auto;grid-row:auto;height:260px}}
+@media(max-width:900px){.nl{display:none}.ham{display:flex}.intro-grid{grid-template-columns:1fr;gap:3rem}.intro-img-wrap{border-radius:20px}.split{grid-template-columns:1fr}.split.rev .si,.split.rev .sb{order:unset}.si{min-height:260px}.kg{grid-template-columns:1fr 1fr}.ft{flex-direction:column;text-align:center}.flinks{justify-content:center}.bgf-inner{gap:1.5rem}}
+@media(max-width:600px){.kg{grid-template-columns:1fr}.brow{flex-direction:column}.brow a{text-align:center}.trust{gap:1.1rem}.wfull-body{flex-direction:column;gap:1.25rem}.ctad{flex-direction:column;align-items:center;gap:1.25rem}.form-grid{grid-template-columns:1fr}.gal-grid{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -274,79 +245,73 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
 <nav id="nav">
   <a href="#hero" class="logo">ELI-DA<span class="logo-sub">Elisabeth Daniel</span></a>
   <ul class="nl">
+    <li><a href="#hero">Start</a></li>
     <li><a href="#wege">Angebot</a></li>
-    <li><a href="#community">Kurse</a></li>
+    <li><a href="#kurse">Kurse</a></li>
     <li><a href="#ueber">Über mich</a></li>
-    <li><a href="#bgf">Unternehmen</a></li>
+    <li><a href="#wege">Unternehmen</a></li>
     <li><a href="#kontakt" class="ncta">Kontakt</a></li>
   </ul>
   <button class="ham" id="ham"><span></span><span></span><span></span></button>
 </nav>
 <div class="mob" id="mob">
+  <a href="#hero" onclick="cm()">Start</a>
   <a href="#wege" onclick="cm()">Angebot</a>
-  <a href="#community" onclick="cm()">Kurse & Community</a>
+  <a href="#kurse" onclick="cm()">Kurse & Termine</a>
   <a href="#ueber" onclick="cm()">Über mich</a>
-  <a href="#bgf" onclick="cm()">Für Unternehmen</a>
+  <a href="#wege" onclick="cm()">Für Unternehmen</a>
   <a href="#kontakt" onclick="cm()">Kontakt</a>
 </div>
 
-<!-- ═══ HERO ═══ -->
-<!-- NEUES FOTO folgt – Platzhalter: Frau in Bewegung, Natur, Morgenlicht -->
+<!-- HERO – Frau beim Wandern in alpiner Natur, Morgenlicht, lebendig -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-c">
-    <p class="hero-label rv">Mag. Elisabeth Daniel · Graz & Eggersdorf</p>
+    <p class="hero-label rv">Mag. Elisabeth Daniel · Graz und Graz-Umgebung</p>
     <h1 class="rv d1">Aktiv, vital<br>und <em>lebensfroh.</em></h1>
-    <p class="hero-sub rv d2">Beratung, Coaching und Bewegung für mehr Balance, Gesundheit und Lebensfreude.</p>
+    <p class="hero-sub rv d2">Beratung, Coaching und Bewegung für mehr Balance, Gesundheit und Lebensfreude – für Körper, Geist und Seele.</p>
     <div class="brow rv d3">
       <a href="#kontakt" class="b-red">Erstgespräch vereinbaren</a>
       <a href="#wege" class="b-ghost">Angebot entdecken</a>
     </div>
     <div class="trust rv d4">
-      <span class="ti highlight">Es ist nie zu spät</span>
       <span class="ti">Persönlich & ganzheitlich</span>
       <span class="ti">Achtsamkeit statt Leistungsdruck</span>
+      <span class="ti">Es ist nie zu spät</span>
     </div>
   </div>
   <div class="scroll-h"><span>Entdecken</span><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></div>
 </section>
 
-<!-- ═══ MISSION STATEMENT (neu, Du-Ansprache) ═══ -->
-<section id="mission">
-  <div class="mission-inner rv">
-    <span class="mission-label">Mission Statement</span>
-    <p class="mission-text">
-      Ich begleite Dich dabei, neue Freiräume zu entdecken, Deine Stärken zu entfalten und Dein Leben bewusst, aktiv und mit Freude zu gestalten.
-      Mit Herz, Humor und Kompetenz unterstütze ich Dich dabei, Dein Selbstvertrauen zu stärken, körperlich und mental beweglich zu bleiben und
-      Deinen ganz persönlichen Weg zu mehr <b>Lebensqualität, Balance und Selbstbestimmung</b> zu finden.
-      Durch ganzheitliche Methoden wie Yoga, achtsames Bewegungstraining, Alphalauf (.walking) und Brain-Gymnastik schaffen wir gemeinsam neue Energie,
-      fördern Deine Entwicklung und öffnen den Blick für die Möglichkeiten, die in jedem neuen Tag liegen.
-    </p>
-    <p class="mission-sig">— Elisabeth</p>
+<!-- ZITAT -->
+<section id="zitat">
+  <div class="zitat-inner rv">
+    <span class="z-label">Zum Nachdenken …</span>
+    <blockquote>„Der Mensch, denn er opfert seine Gesundheit, um Geld zu machen. Dann opfert er sein Geld, um seine Gesundheit wieder zu erlangen. Und dann ist er so ängstlich wegen der Zukunft, dass er die Gegenwart nicht genießt. Das Resultat ist, dass er nicht in der Gegenwart lebt. Er lebt, als würde er nie sterben. Und dann stirbt er und hat nie wirklich gelebt."</blockquote>
+    <p class="z-src">— Dalai Lama</p>
+    <p class="z-pers">Jeder von uns trägt die Verantwortung für sein Leben, seinen Körper und seine Gesundheit.<br><strong>Mein Angebot ist es, Sie dabei zu begleiten – persönlich, ganzheitlich und mit Herz.</strong></p>
   </div>
 </section>
 
-<!-- ═══ FOTO OHNE ZITAT + HERZLICH WILLKOMMEN ═══ -->
-<!-- Anderes Foto (kein Dalai-Lama-Zitat mehr) -->
-<section id="zitat">
-  <div class="zitat-grid">
-    <div class="zitat-img rvl">
-      <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=900&q=85&auto=format&fit=crop" alt="Bewegung in der Natur" style="object-position:center 25%">
+<!-- INTRO – Waldweg Steiermark, organische Form, Morgenstimmung -->
+<section id="intro">
+  <div class="intro-grid">
+    <div class="intro-img-wrap rvl">
+      <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=900&q=85&auto=format&fit=crop&crop=center" alt="Steirischer Waldweg im Morgenlicht">
+      <div class="intro-float">
+        <p class="if-q">„Es ist nie zu spät, aktiv zu beginnen."</p>
+        <span class="if-s">ELI-DA · Elisabeth Daniel</span>
+      </div>
     </div>
     <div class="rvr">
       <span class="ey">Herzlich willkommen</span>
       <h2 class="sh">Manchmal zeigt uns das Leben, dass etwas aus dem Gleichgewicht geraten ist.</h2>
-      <p class="sp">Der Körper wird müde. Der Kopf laut. Die Freude leiser. Dann braucht es jemanden, der begleitet – ohne Leistungsdruck, mit echter Achtsamkeit und Herzlichkeit.</p>
-      <button class="mehr-toggle" onclick="toggleMehr(this)">Mehr lesen <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="mehr-content">
-        In jedem Leben gibt es „Ups and Downs", Krisen, die es zu bewältigen gilt. Ich habe die Erfahrung gemacht – und auch die Wissenschaft bestätigt uns –, dass in solchen Zeiten Bewegung und viel Zeit in der Natur enorm hilfreich sind, um zu reflektieren, die eigenen Kräfte und Ressourcen zu entdecken und selbstbewusst den eigenen Weg zu gehen.<br><br>
-        Deshalb möchte ich dich dabei unterstützen, auch <strong>DEINEN</strong> Weg zu finden.
-      </div>
+      <p class="sp">Der Körper wird müde. Der Kopf laut. Die Freude leiser. Dann braucht es jemanden, der begleitet – ohne Leistungsdruck, mit echter Achtsamkeit und Herzlichkeit.<br><br>Als Babyboomerin weiß ich: Es ist nie zu spät, aktiv zu beginnen. Ich möchte Ihnen zeigen, was möglich ist.</p>
     </div>
   </div>
 </section>
 
-<!-- ═══ ANGEBOT: WEGE ═══ -->
+<!-- ANGEBOTE -->
 <section id="wege">
   <div style="max-width:1200px;margin:0 auto">
     <div class="wege-head rv">
@@ -354,7 +319,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
       <h2 class="sh">Wege zu mehr Leichtigkeit und Lebensfreude</h2>
     </div>
 
-    <!-- BERATUNG – wie gehabt -->
+    <!-- BERATUNG – ruhige Frau in Natur, Achtsamkeit, Stille -->
     <div class="split rv">
       <div class="si">
         <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=900&q=85&auto=format&fit=crop" alt="Beratung und Coaching" style="object-position:center 20%">
@@ -372,198 +337,190 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
           <span class="wtag">Tages- & Wochenendseminare</span>
         </div>
         <a href="#kontakt" class="wlink">Anfragen →</a>
+        <button class="mehr-toggle" onclick="toggleMehr(this)">Mehr erfahren <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mehr-content">In Einzel- und Gruppenformaten, auch als Tages- oder Wochenendseminar. Für Menschen in herausfordernden Lebensphasen – Trennung, Verlust, Erschöpfung, Neuorientierung. Ziel ist immer: Hilfe zur Selbsthilfe.</div>
       </div>
     </div>
 
-    <!-- MENTALE & KÖRPERLICHE – wie gehabt -->
+    <!-- BEWEGUNG – Yoga im Freien, Morgenlicht, Natur -->
     <div class="split rev rv">
       <div class="si">
-        <img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=900&q=85&auto=format&fit=crop" alt="Alphalauf und Bewegung" style="object-position:center 30%">
+        <img src="../Images/2025Yoga1.JPG" alt="Elisabeth Daniel beim Yoga im Freien" style="object-position:center 20%">
       </div>
       <div class="sb">
         <div class="wn">02</div>
         <h3 class="wh">Mentale & körperliche<br>Fitness</h3>
-        <p class="wp">Achtsamkeit – das ist für mich der Schlüssel zu einem bewussteren, freudvolleren Leben. Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegenwärtige Erleben ohne Bewertung im Vordergrund steht. Denn nicht Vergangenheit oder Zukunft, sondern die Gegenwart – <strong>JETZT</strong> – ist die Zeit, auf die wir unmittelbar Einfluss nehmen können.</p>
+        <p class="wp">Nicht Leistung, sondern Achtsamkeit steht im Mittelpunkt. Bewegung als Freude, als Energie-Quelle, als Weg zu sich selbst – in der Natur, in der Gruppe oder allein.</p>
         <div class="wtags">
           <span class="wtag">Yoga</span>
           <span class="wtag">Alphalauf & Alphawalking</span>
           <span class="wtag">Ganzheitliches Bewegungstraining</span>
-          <span class="wtag">Brain-Gymnastik</span>
+          <span class="wtag">Schwimmtraining</span>
           <span class="wtag">Fitnesstraining</span>
         </div>
         <a href="#kontakt" class="wlink">Anfragen →</a>
+        <button class="mehr-toggle" onclick="toggleMehr(this)">Mehr erfahren <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mehr-content">Yoga verbindet Atem, Bewegung und Achtsamkeit. Alphalauf ist meditatives Laufen in der Natur – eine Methode, die Körper und Geist verbindet. Ganzheitliches Bewegungstraining stärkt Kraft, Ausdauer und Koordination – immer in Ihrem Tempo, ohne Druck.</div>
       </div>
     </div>
 
-    <!-- KÖRPERLICHE & GEISTIGE FITNESS BIS INS HOHE ALTER -->
-    <div class="wfull rv">
-      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1400&q=85&auto=format&fit=crop" alt="Aktiv bis ins hohe Alter" style="object-position:center 40%">
-      <div class="wfull-body">
-        <div class="wft">
-          <div class="wfn">03</div>
-          <h3 class="wfh">Körperliche & geistige Fitness bis ins hohe Alter</h3>
-          <p class="wfp">Es gibt kein „Jetzt ist es ohnehin schon zu spät"! Körperliche, geistige und mentale Entwicklung sind immer möglich.</p>
-          <div class="wftags">
-            <span class="wftag">Seniorenaktivtraining</span>
-            <span class="wftag">Sturzprophylaxe</span>
-            <span class="wftag">Gedächtnistraining</span>
-            <span class="wftag">Gleichgewicht & Koordination</span>
-            <span class="wftag">Demenzprävention</span>
-          </div>
-          <button class="mehr-toggle" style="color:rgba(255,255,255,.7);margin-top:.5rem" onclick="toggleMehr(this)">Meine Vision <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-          <div class="mehr-content" style="color:rgba(255,255,255,.72);border-top-color:rgba(255,255,255,.15);max-width:600px">
-            Meine Vision ist es, dass wir – die sogenannten „Babyboomer" (ca. 1955–1975 Geborene) – für Jüngere Vorbild dafür sind, herkömmliche Glaubenssätze über das Älterwerden über Bord zu werfen und zu zeigen, dass persönliche Entwicklung immer möglich ist. Denn man kann aus jeder Lebenszeit das Beste herausholen.
-          </div>
+    <!-- SENIOREN – aktive ältere Frau, Bewegung, Sonne, Lebensfreude -->
+    <div class="split rv">
+      <div class="si">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=85&auto=format&fit=crop" alt="Körperliche und geistige Fitness bis ins hohe Alter" style="object-position:center 40%">
+      </div>
+      <div class="sb">
+        <div class="wn">03</div>
+        <h3 class="wh">Körperliche & geistige Fitness<br>bis ins hohe Alter</h3>
+        <p class="wp">Es ist nie zu spät damit zu beginnen. Als Babyboomerin möchte ich zeigen: Aktiv bleiben bis ins hohe Alter ist möglich – mit Freude, Sicherheit und echter Lebendigkeit.</p>
+        <div class="wtags">
+          <span class="wtag">Seniorenaktivtraining</span>
+          <span class="wtag">Sturzprophylaxe</span>
+          <span class="wtag">Gedächtnistraining</span>
+          <span class="wtag">Gleichgewicht & Koordination</span>
+          <span class="wtag">Demenzprävention</span>
+          <span class="wtag">Community</span>
         </div>
-        <a href="#kontakt" class="b-wh">Mehr erfahren</a>
+        <a href="#kontakt" class="wlink">Anfragen →</a>
+        <button class="mehr-toggle" onclick="toggleMehr(this)">Community & mehr <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mehr-content">Gemeinsam ist es leichter – und macht mehr Spaß! Meine Kurse und Trainings bieten nicht nur Bewegung, sondern auch echte Gemeinschaft. Der Austausch mit Gleichgesinnten, gegenseitige Motivation und das Gefühl, dazuzugehören – das ist genauso wertvoll wie das Training selbst. Ob in der Gruppe beim Yoga, beim Schwimmen oder beim Alphalauf: Sie sind nie allein auf diesem Weg.</div>
+      </div>
+    </div>
+
+    <!-- BGF – Punkt 04 -->
+    <div class="split rev rv">
+      <div class="si">
+        <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=900&q=85&auto=format&fit=crop" alt="Betriebliche Gesundheitsförderung" style="object-position:center 40%">
+      </div>
+      <div class="sb">
+        <div class="wn">04</div>
+        <h3 class="wh">Betriebliche<br>Gesundheitsförderung</h3>
+        <p class="wp">Gesunde, motivierte Mitarbeiter sind das Kapital jedes Unternehmens. Mit maßgeschneiderten Programmen begleite ich Ihr Team zu mehr Wohlbefinden, Resilienz und Leistungsfähigkeit.</p>
+        <div class="wtags">
+          <span class="wtag">Stressmanagement</span>
+          <span class="wtag">Bewegungsprogramme</span>
+          <span class="wtag">Burnout-Prävention</span>
+          <span class="wtag">Teamcoaching</span>
+          <span class="wtag">Workshops & Seminare</span>
+        </div>
+        <a href="#kontakt" class="wlink">Anfragen →</a>
+        <button class="mehr-toggle" onclick="toggleMehr(this)">Mehr erfahren <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mehr-content">Betriebliche Gesundheitsförderung zahlt sich aus – für Mensch und Unternehmen. Ich entwickle individuelle Programme für Ihr Team: von Bewegungseinheiten und Yoga im Betrieb über Stressmanagement-Workshops bis hin zu systemischem Coaching. Flexibel, praxisnah und auf Ihre Bedürfnisse abgestimmt.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ WERDE TEIL DER COMMUNITY (neu) ═══ -->
-<section id="community">
-  <div class="community-c">
-    <div class="community-top rv">
+<!-- KURSE -->
+<section id="kurse">
+  <div class="kurse-c">
+    <div class="kurse-top rv">
       <span class="ey">Kurse & Termine</span>
-      <h2 class="sh">Werde Teil der Community</h2>
-      <p class="sp" style="margin:0 auto">Besuche einen der derzeit laufenden Kurse und werde Teil unserer Community.</p>
-      <span class="community-slogan">„[ Name oder Slogan der Community folgt ]"</span>
+      <h2 class="sh">Frühling & Sommer 2026</h2>
+      <p style="font-size:.9rem;color:var(--text-s);max-width:460px;margin:.5rem auto 0;line-height:1.75">Für Anmeldung und weitere Infos schreiben Sie mir einfach.</p>
     </div>
-    <div class="cg">
-
-      <!-- Yoga – aktuell -->
-      <div class="cc">
-        <div class="cc-img">
-          <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?w=500&q=85&auto=format&fit=crop" alt="Yoga" style="object-position:center 20%">
-          <span class="cc-badge">Aktuell</span>
+    <div class="kg">
+      <!-- Yoga – ruhige Gruppe in warmem Licht -->
+      <div class="kk rv d1">
+        <div class="ki">
+          <img src="../Images/2025-Yoga-Pelikastri.jpg" alt="Yoga-Gruppe Eggersdorf" style="object-position:center 30%">
+          <span class="kcat">Yoga</span>
         </div>
-        <div class="cc-body">
-          <h3 class="cc-h">Yoga</h3>
-          <p class="cc-p">Jeden Dienstag · 19:00–20:15 Uhr · Eggersdorf bei Graz</p>
-        </div>
-      </div>
-
-      <!-- Alphalauf – aktuell -->
-      <div class="cc">
-        <div class="cc-img">
-          <img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=500&q=85&auto=format&fit=crop" alt="Alphalauf" style="object-position:center 35%">
-          <span class="cc-badge">Aktuell</span>
-        </div>
-        <div class="cc-body">
-          <h3 class="cc-h">Alphalauf</h3>
-          <p class="cc-p">Meditatives Laufen & Walken in der Natur · Termine auf Anfrage</p>
+        <div class="kb">
+          <h3 class="kh">Yoga in Eggersdorf</h3>
+          <p class="kloc">📍 Kulturhalle Eggersdorf · Schulgasse 3</p>
+          <div class="ktime"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Jeden Dienstag · 19:00 – 20:15 Uhr</div>
+          <p class="kp">Atemarbeit, Bewegung, Achtsamkeit. Für Anfänger und Fortgeschrittene. Bei Schönwetter am Sportplatz.</p>
+          <a href="#kontakt" class="b-kk">Anfragen</a>
         </div>
       </div>
-
-      <!-- Seniorentraining – aktuell -->
-      <div class="cc">
-        <div class="cc-img">
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=85&auto=format&fit=crop" alt="Seniorentraining" style="object-position:center 30%">
-          <span class="cc-badge">Aktuell</span>
+      <!-- Bewegungstraining – Gruppe aktiv im Freien -->
+      <div class="kk rv d2">
+        <div class="ki">
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&q=85&auto=format&fit=crop" alt="Bewegungstraining" style="object-position:center 30%">
+          <span class="kcat">Bewegungstraining</span>
         </div>
-        <div class="cc-body">
-          <h3 class="cc-h">Seniorentraining</h3>
-          <p class="cc-p">Jeden Dienstag · 17:45–18:45 Uhr · Eggersdorf bei Graz</p>
-        </div>
-      </div>
-
-      <!-- Einzelcoaching -->
-      <div class="cc">
-        <div class="cc-img">
-          <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=500&q=85&auto=format&fit=crop" alt="Einzelcoaching" style="object-position:center 25%">
-          <span class="cc-badge">Aktuell</span>
-        </div>
-        <div class="cc-body">
-          <h3 class="cc-h">Einzelcoaching</h3>
-          <p class="cc-p">Individuelle Termine nach Vereinbarung · persönlich & flexibel</p>
+        <div class="kb">
+          <h3 class="kh">Ganzheitliches Bewegungstraining</h3>
+          <p class="kloc">📍 Kulturhalle Eggersdorf · Schulgasse 3</p>
+          <div class="ktime"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Jeden Dienstag · 17:45 – 18:45 Uhr</div>
+          <p class="kp">Kraft, Koordination, Beweglichkeit – in entspannter Atmosphäre. Auch als Seniorenaktivtraining 50+.</p>
+          <a href="#kontakt" class="b-kk">Anfragen</a>
         </div>
       </div>
-
-      <!-- 3 leere Platzhalter -->
-      <div class="cc placeholder">
-        <div class="cc-ph-inner">
-          <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
-          <p>Platzhalter<br>für zukünftiges<br>Angebot</p>
+      <!-- Schwimmen – Wasser, Leichtigkeit, Freude -->
+      <div class="kk rv d3">
+        <div class="ki">
+          <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=700&q=85&auto=format&fit=crop" alt="Schwimmgruppe Auster" style="object-position:center 40%">
+          <span class="kcat">Schwimmen</span>
+        </div>
+        <div class="kb">
+          <h3 class="kh">Hobby-Schwimmgruppe Auster</h3>
+          <p class="kloc">📍 Auster Graz</p>
+          <div class="ktime"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Jeden Freitag · 13:30 – 14:30 Uhr</div>
+          <p class="kp">Gemeinsames Schwimmtraining für alle Niveaus. Freude am Wasser steht im Mittelpunkt.</p>
+          <a href="#kontakt" class="b-kk">Anfragen</a>
         </div>
       </div>
-      <div class="cc placeholder">
-        <div class="cc-ph-inner">
-          <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
-          <p>Platzhalter<br>für zukünftiges<br>Angebot</p>
-        </div>
-      </div>
-      <div class="cc placeholder">
-        <div class="cc-ph-inner">
-          <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
-          <p>Platzhalter<br>für zukünftiges<br>Angebot</p>
-        </div>
-      </div>
-
     </div>
     <p style="text-align:center;margin-top:2rem;font-size:.83rem;color:var(--text-s);font-style:italic">Weitere Kurse, Tages- & Wochenendseminare sowie BGF-Angebote auf Anfrage</p>
   </div>
 </section>
 
-<!-- ═══ BGF ═══ -->
-<section id="bgf">
-  <div class="bgf-bg"></div>
-  <div class="bgf-inner">
-    <div class="bgf-icon">
-      <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-    </div>
-    <div class="bgf-text">
-      <div class="bgf-tag">Für Unternehmen</div>
-      <h3 class="bgf-h">Betriebliche Gesundheitsförderung (BGF)</h3>
-      <p class="bgf-p">Gesunde, motivierte Mitarbeiter sind das Kapital jedes Unternehmens. Mit maßgeschneiderten Programmen – Stressmanagement, Bewegung, Coaching – begleite ich Ihr Team zu mehr Wohlbefinden und Leistungsfähigkeit.</p>
-    </div>
-    <a href="#kontakt" class="b-gout">Angebot anfragen</a>
-  </div>
-</section>
-
-<!-- ═══ IMPRESSIONEN / GALERIE ═══ -->
-<section id="galerie">
-  <div class="gal-inner">
-    <div class="gal-top rv">
-      <span class="ey">Impressionen</span>
-      <h2 class="sh" style="margin:0">Verschiedene Fotos aus Kursen & Natur</h2>
-    </div>
-    <div class="gal-grid rv">
-      <div class="gi"><img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=900&q=80&auto=format&fit=crop" alt="Alphalauf" style="object-position:center 35%"></div>
-      <div class="gi"><img src="https://images.unsplash.com/photo-1588286840104-8957b019727f?w=600&q=80&auto=format&fit=crop" alt="Yoga" style="object-position:center 20%"></div>
-      <div class="gi"><img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=600&q=80&auto=format&fit=crop" alt="Natur Steiermark"></div>
-      <div class="gi"><img src="https://images.unsplash.com/photo-1504701954957-2010ec3bcec1?w=600&q=80&auto=format&fit=crop" alt="Morgenlicht"></div>
-      <div class="gi"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900&q=80&auto=format&fit=crop" alt="Bewegung im Freien" style="object-position:center 28%"></div>
-      <div class="gi"><img src="https://images.unsplash.com/photo-1560090995-01632a28895b?w=600&q=80&auto=format&fit=crop" alt="Wasser"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ ÜBER MICH (neuer Text) ═══ -->
+<!-- ÜBER MICH – echtes Foto von eli-da.at -->
 <section id="ueber">
   <div class="ueber-grid">
     <div class="portrait-wrap rvl">
       <div class="portrait">
-        <img src="https://www.eli-da.at/eli-da/wp-content/uploads/2025/10/DanielElisabeth-1024x683.jpg" alt="Mag. Elisabeth Daniel">
+        <img src="../Images/Unknown.jpeg" alt="Mag. Elisabeth Daniel">
       </div>
       <div class="pbadge">
         <div class="pbn">Mag. Elisabeth Daniel</div>
-        <div class="pbr">ELI-DA · Graz & Eggersdorf</div>
+        <div class="pbr">ELI-DA · Graz und Graz-Umgebung</div>
       </div>
     </div>
     <div class="rvr">
       <span class="ey">Über mich</span>
-      <h2 class="ue-h">Entwicklung kennt kein Alter.</h2>
-      <p class="ue-p">Bewegung und Natur begleiten mich seit meiner Kindheit und prägen mein Leben bis heute. Diese Begeisterung führte schließlich über Umwege dazu, meiner Berufung zu folgen: Menschen dabei zu unterstützen, ein aktives, selbstbestimmtes und zufriedenes Leben führen zu können.</p>
-      <p class="ue-p">Meine Arbeit als Lebensberaterin und Fitnesscoach setzt immer beim Körper an. Denn ein positiver Zugang zum eigenen Körper bildet die Basis für ein gesundes Selbstbild – und in weiterer Folge für Selbstakzeptanz, Selbstfürsorge, Selbstliebe und eine positive innere Haltung.</p>
-      <p class="ue-p">Heute bin ich <b>mehrfache Oma</b> und fühle mich fitter als während meiner Studienzeit. Ich bin überzeugt, dass körperliche und geistige Aktivität sowie eine positive Lebenseinstellung wesentlich dazu beigetragen haben.</p>
-      <p class="ue-p">Deshalb ist es mir ein besonderes Anliegen, vor allem Menschen meiner Generation – die <b>Babyboomer</b> – zu motivieren, den kommenden Jahren aktiv, selbstbewusst und freudvoll entgegenzublicken. Denn Entwicklung kennt kein Alter – und unser bestes Kapitel kann jetzt beginnen.</p>
+      <h2 class="ue-h">Ich begleite Menschen auf ihrem Weg zu mehr Gesundheit, Balance und Lebensfreude.</h2>
+      <p class="ue-p">Ich bin Elisabeth Daniel – als Babyboomerin möchte ich zeigen, dass es nie zu spät ist, aktiv zu beginnen. Bewegung, Natur und persönliche Entwicklung begleiten mich mein Leben lang.</p>
+      <p class="ue-p">Naturverbundenheit, echte Wertschätzung und der Glaube daran, dass jeder Mensch die Ressourcen für ein erfülltes Leben in sich trägt – das ist das Fundament meiner Arbeit.</p>
+      <div class="quals">
+        <span>Lebens- und Sozialberaterin (Mag.)</span>
+        <span>Fitness- und Yogatrainerin</span>
+        <span>Seniorenaktivtrainerin</span>
+        <span>Systemische Beraterin · BGF-Trainerin</span>
+        <span>Alphalauf-Trainerin</span>
+      </div>
       <a href="#kontakt" class="b-sage">Kennenlernen</a>
     </div>
   </div>
 </section>
 
-<!-- ═══ CTA ═══ -->
+<!-- GALERIE – 6 verschiedene Motive: Alphalauf, Yoga, Natur, Licht, Bewegung, Wasser -->
+<section id="galerie">
+  <div class="gal-inner">
+    <div class="gal-top rv">
+      <span class="ey">Impressionen</span>
+      <h2 class="sh" style="margin:0">Natur, Bewegung & Lebensfreude</h2>
+    </div>
+    <div class="gal-grid rv">
+      <!-- Alphalauf in der Natur -->
+      <div class="gi"><img src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=900&q=85&auto=format&fit=crop" alt="Alphalauf in der Natur" style="object-position:center 35%"></div>
+      <!-- Yoga Gruppe Pelikastri -->
+      <div class="gi"><img src="../Images/2025-Yoga-Pelikastri.jpg" alt="Yoga Gruppe" style="object-position:center 40%"></div>
+      <!-- Elisabeth mit Alphalauf Banner -->
+      <div class="gi"><img src="../Images/Unknown-1.jpeg" alt="Elisabeth Daniel – Alphalauf" style="object-position:center top"></div>
+      <!-- Erster Schritt – Herbstblätter -->
+      <div class="gi"><img src="../Images/2025_DerersteSchritt.jpg" alt="Der erste Schritt" style="object-position:center center"></div>
+      <!-- Elisabeth beim Yoga im Freien -->
+      <div class="gi"><img src="../Images/2025Yoga1.JPG" alt="Yoga im Freien" style="object-position:center 10%"></div>
+      <!-- Elisabeth Portrait in der Natur -->
+      <div class="gi"><img src="../Images/Unknown.jpeg" alt="Elisabeth Daniel" style="object-position:center 15%"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA – lichtdurchfluteter Waldweg, Ankommen -->
 <section id="cta">
   <div class="cta-bg"></div>
   <div class="cta-c rv">
@@ -573,18 +530,18 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
     <div class="ctad">
       <div class="cdi"><div class="cdl">E-Mail</div><a href="mailto:aktiv@eli-da.at">aktiv@eli-da.at</a></div>
       <div class="cdi"><div class="cdl">Telefon</div><a href="tel:+436641064430">+43 664 106 44 30</a></div>
-      <div class="cdi"><div class="cdl">Standort</div><span>Graz & Eggersdorf bei Graz</span></div>
+      <div class="cdi"><div class="cdl">Standort</div><span>Graz und Graz-Umgebung</span></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ KONTAKT ═══ -->
+<!-- KONTAKT -->
 <section id="kontakt">
   <div class="form-wrap">
     <div class="form-top rv">
       <span class="ey">Schreiben Sie mir</span>
       <h2 class="sh">Ich freue mich auf Ihre Nachricht</h2>
-      <p style="font-size:.9rem;color:var(--text-s);line-height:1.75;margin-top:.5rem">Ihre Nachricht kommt direkt zu mir.</p>
+      <p style="font-size:.9rem;color:var(--text-s);line-height:1.75;margin-top:.5rem">Kein Formular-Dschungel – Ihre Nachricht kommt direkt zu mir.</p>
     </div>
     <form class="form-grid rv" onsubmit="return submitForm(event)">
       <div class="fg"><label for="fn">Vorname</label><input type="text" id="fn" placeholder="Elisabeth"></div>
@@ -596,10 +553,11 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
         <select id="thema">
           <option value="">Bitte wählen</option>
           <option>Beratung & Coaching</option>
-          <option>Yoga</option>
+          <option>Yoga-Kurs Eggersdorf</option>
+          <option>Ganzheitliches Bewegungstraining</option>
+          <option>Seniorenaktivtraining</option>
+          <option>Schwimmgruppe Auster</option>
           <option>Alphalauf / Alphawalking</option>
-          <option>Seniorentraining</option>
-          <option>Einzelcoaching</option>
           <option>Tages- oder Wochenendseminar</option>
           <option>Betriebliche Gesundheitsförderung</option>
           <option>Sonstiges</option>
@@ -610,12 +568,6 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
         <label style="display:flex;align-items:flex-start;gap:.6rem;text-transform:none;letter-spacing:0;font-size:.8rem;color:var(--text-m);cursor:pointer;font-weight:300">
           <input type="checkbox" id="dsgvo" style="width:auto;margin-top:.15rem;flex-shrink:0">
           Ich habe die <a href="#" style="color:var(--red)">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.
-        </label>
-      </div>
-      <div class="fg full">
-        <label style="display:flex;align-items:flex-start;gap:.6rem;text-transform:none;letter-spacing:0;font-size:.8rem;color:var(--text-m);cursor:pointer;font-weight:300">
-          <input type="checkbox" id="newsletter" style="width:auto;margin-top:.15rem;flex-shrink:0">
-          Ich möchte den Newsletter per E-Mail erhalten.
         </label>
       </div>
       <div class="fg full">
@@ -631,12 +583,12 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
     <a href="#hero" class="flogo">ELI-DA<small>Mag. Elisabeth Daniel</small></a>
     <p class="fclaim">„Aktiv, vital und lebensfroh."</p>
     <ul class="flinks">
-      <li><a href="#">Impressum</a></li>
-      <li><a href="#">Datenschutz</a></li>
-      <li><a href="#">Kontakt & Anfahrt</a></li>
+      <li><a href="eli-da-impressum.html">Impressum</a></li>
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+      <li><a href="#kontakt">Kontakt & Anfahrt</a></li>
     </ul>
   </div>
-  <div class="fcopy">© 2026 Mag. Elisabeth Daniel · ELI-DA · Graz, Österreich · aktiv@eli-da.at · +43 664 106 44 30</div>
+  <div class="fcopy">© 2026 Mag. Elisabeth Daniel · ELI-DA · Graz und Graz-Umgebung · aktiv@eli-da.at · +43 664 106 44 30</div>
 </footer>
 
 <script>
@@ -655,7 +607,7 @@ function toggleMehr(btn){
   const c=btn.nextElementSibling;
   c.classList.toggle('open');
   btn.classList.toggle('open');
-  btn.childNodes[0].textContent=c.classList.contains('open')?'Weniger anzeigen ':'Mehr lesen ';
+  btn.childNodes[0].textContent=c.classList.contains('open')?'Weniger anzeigen ':'Mehr erfahren ';
 }
 function submitForm(e){
   e.preventDefault();
