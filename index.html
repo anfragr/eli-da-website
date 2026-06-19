@@ -249,7 +249,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
     <li><a href="#wege">Angebot</a></li>
     <li><a href="#kurse">Kurse</a></li>
     <li><a href="#ueber">Über mich</a></li>
-    <li><a href="#wege">Unternehmen</a></li>
+    <li><a href="#bgf">Unternehmen</a></li>
     <li><a href="#kontakt" class="ncta">Kontakt</a></li>
   </ul>
   <button class="ham" id="ham"><span></span><span></span><span></span></button>
@@ -283,13 +283,26 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
   <div class="scroll-h"><span>Entdecken</span><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></div>
 </section>
 
-<!-- ZITAT -->
-<section id="zitat">
-  <div class="zitat-inner rv">
-    <span class="z-label">Zum Nachdenken …</span>
-    <blockquote>„Der Mensch, denn er opfert seine Gesundheit, um Geld zu machen. Dann opfert er sein Geld, um seine Gesundheit wieder zu erlangen. Und dann ist er so ängstlich wegen der Zukunft, dass er die Gegenwart nicht genießt. Das Resultat ist, dass er nicht in der Gegenwart lebt. Er lebt, als würde er nie sterben. Und dann stirbt er und hat nie wirklich gelebt."</blockquote>
-    <p class="z-src">— Dalai Lama</p>
-    <p class="z-pers">Jeder von uns trägt die Verantwortung für sein Leben, seinen Körper und seine Gesundheit.<br><strong>Mein Angebot ist es, Sie dabei zu begleiten – persönlich, ganzheitlich und mit Herz.</strong></p>
+<!-- MISSION STATEMENT -->
+<section id="mission" style="background:var(--text);padding:clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,3rem);position:relative;overflow:hidden;text-align:center">
+  <div style="position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:120%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(170,171,48,.08) 0%,transparent 65%)"></div>
+  <div class="rv" style="max-width:780px;margin:0 auto;position:relative;z-index:1">
+    <span style="font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:1.5rem;display:block">Mission Statement</span>
+    <p style="font-family:var(--serif);font-weight:300;font-style:italic;font-size:clamp(1.15rem,2.2vw,1.6rem);line-height:1.75;color:rgba(255,255,255,.92)">
+      Ich begleite Dich dabei, neue Freiräume zu entdecken, Deine Stärken zu entfalten und Dein Leben bewusst, aktiv und mit Freude zu gestalten.
+      Mit Herz, Humor und Kompetenz unterstütze ich Dich dabei, Dein Selbstvertrauen zu stärken, körperlich und mental beweglich zu bleiben und
+      Deinen ganz persönlichen Weg zu mehr <b style="font-style:normal;font-weight:500;color:var(--green)">Lebensqualität, Balance und Selbstbestimmung</b> zu finden.
+      Durch ganzheitliche Methoden wie Yoga, achtsames Bewegungstraining, Alphalauf (.walking) und Brain-Gymnastik schaffen wir gemeinsam neue Energie,
+      fördern Deine Entwicklung und öffnen den Blick für die Möglichkeiten, die in jedem neuen Tag liegen.
+    </p>
+    <p style="margin-top:2rem;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)">— Elisabeth</p>
+  </div>
+</section>
+
+<!-- ZITAT/FOTO – anderes Foto ohne Zitat -->
+<section id="zitat" style="background:#fff;padding:clamp(3.5rem,7vw,6rem) clamp(1.5rem,5vw,3rem)">
+  <div class="rv" style="max-width:1000px;margin:0 auto;border-radius:24px;overflow:hidden;aspect-ratio:21/9">
+    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1400&q=85&auto=format&fit=crop" alt="Bewegung in der Natur" style="width:100%;height:100%;object-fit:cover;object-position:center 30%">
   </div>
 </section>
 
@@ -363,8 +376,12 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
         <div class="mehr-content">Yoga verbindet Atem, Bewegung und Achtsamkeit. Alphalauf ist meditatives Laufen in der Natur – eine Methode, die Körper und Geist verbindet. Ganzheitliches Bewegungstraining stärkt Kraft, Ausdauer und Koordination – immer in Ihrem Tempo, ohne Druck.</div>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- SENIOREN – aktive ältere Frau, Bewegung, Sonne, Lebensfreude -->
+<!-- SENIOREN – aktive ältere Frau, Bewegung, Sonne, Lebensfreude -->
+<section id="senioren" style="background:#fff;padding-top:0">
+  <div style="max-width:1200px;margin:0 auto">
     <div class="split rv">
       <div class="si">
         <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=85&auto=format&fit=crop" alt="Körperliche und geistige Fitness bis ins hohe Alter" style="object-position:center 40%">
@@ -379,15 +396,18 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
           <span class="wtag">Gedächtnistraining</span>
           <span class="wtag">Gleichgewicht & Koordination</span>
           <span class="wtag">Demenzprävention</span>
-          <span class="wtag">Community</span>
         </div>
         <a href="#kontakt" class="wlink">Anfragen →</a>
-        <button class="mehr-toggle" onclick="toggleMehr(this)">Community & mehr <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="mehr-content">Gemeinsam ist es leichter – und macht mehr Spaß! Meine Kurse und Trainings bieten nicht nur Bewegung, sondern auch echte Gemeinschaft. Der Austausch mit Gleichgesinnten, gegenseitige Motivation und das Gefühl, dazuzugehören – das ist genauso wertvoll wie das Training selbst. Ob in der Gruppe beim Yoga, beim Schwimmen oder beim Alphalauf: Sie sind nie allein auf diesem Weg.</div>
+        <button class="mehr-toggle" onclick="toggleMehr(this)">Mehr erfahren <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mehr-content">Gemeinsam ist es leichter – und macht mehr Spaß! Meine Kurse und Trainings bieten nicht nur Bewegung, sondern auch echte Gemeinschaft. Der Austausch mit Gleichgesinnten, gegenseitige Motivation und das Gefühl, dazuzugehören – das ist genauso wertvoll wie das Training selbst.</div>
       </div>
     </div>
+  </div>
+</section>
 
-    <!-- BGF – Punkt 04 -->
+<!-- BGF – Betriebliche Gesundheitsförderung -->
+<section id="bgf" style="background:var(--cream);padding-top:0">
+  <div style="max-width:1200px;margin:0 auto">
     <div class="split rev rv">
       <div class="si">
         <img src="https://images.unsplash.com/photo-1552581234-26160f608093?w=900&q=85&auto=format&fit=crop" alt="Betriebliche Gesundheitsförderung" style="object-position:center 40%">
@@ -411,55 +431,90 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
   </div>
 </section>
 
-<!-- KURSE -->
+<!-- WERDE TEIL DER COMMUNITY -->
 <section id="kurse">
   <div class="kurse-c">
     <div class="kurse-top rv">
       <span class="ey">Kurse & Termine</span>
-      <h2 class="sh">Frühling & Sommer 2026</h2>
-      <p style="font-size:.9rem;color:var(--text-s);max-width:460px;margin:.5rem auto 0;line-height:1.75">Für Anmeldung und weitere Infos schreiben Sie mir einfach.</p>
+      <h2 class="sh">Werde Teil der Community</h2>
+      <p style="font-size:.9rem;color:var(--text-s);max-width:460px;margin:.5rem auto 0;line-height:1.75">Besuche einen der derzeit laufenden Kurse und werde Teil unserer Community.</p>
     </div>
     <div class="kg">
-      <!-- Yoga – ruhige Gruppe in warmem Licht -->
+      <!-- Yoga – aktuell -->
       <div class="kk rv d1">
         <div class="ki">
           <img src="../Images/2025-Yoga-Pelikastri.jpg" alt="Yoga-Gruppe Eggersdorf" style="object-position:center 30%">
-          <span class="kcat">Yoga</span>
+          <span class="kcat">Aktuell</span>
         </div>
         <div class="kb">
-          <h3 class="kh">Yoga in Eggersdorf</h3>
+          <h3 class="kh">Yoga</h3>
           <p class="kloc">📍 Kulturhalle Eggersdorf · Schulgasse 3</p>
           <div class="ktime"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Jeden Dienstag · 19:00 – 20:15 Uhr</div>
           <p class="kp">Atemarbeit, Bewegung, Achtsamkeit. Für Anfänger und Fortgeschrittene. Bei Schönwetter am Sportplatz.</p>
           <a href="#kontakt" class="b-kk">Anfragen</a>
         </div>
       </div>
-      <!-- Bewegungstraining – Gruppe aktiv im Freien -->
+      <!-- Alphalauf – aktuell -->
       <div class="kk rv d2">
         <div class="ki">
-          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&q=85&auto=format&fit=crop" alt="Bewegungstraining" style="object-position:center 30%">
-          <span class="kcat">Bewegungstraining</span>
+          <img src="../Images/Unknown-1.jpeg" alt="Alphalauf" style="object-position:center top">
+          <span class="kcat">Aktuell</span>
         </div>
         <div class="kb">
-          <h3 class="kh">Ganzheitliches Bewegungstraining</h3>
-          <p class="kloc">📍 Kulturhalle Eggersdorf · Schulgasse 3</p>
-          <div class="ktime"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Jeden Dienstag · 17:45 – 18:45 Uhr</div>
-          <p class="kp">Kraft, Koordination, Beweglichkeit – in entspannter Atmosphäre. Auch als Seniorenaktivtraining 50+.</p>
+          <h3 class="kh">Alphalauf</h3>
+          <p class="kloc">📍 Graz und Graz-Umgebung</p>
+          <div class="ktime"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Termine nach Vereinbarung</div>
+          <p class="kp">Meditatives Laufen und Walken in der Natur. Achtsamkeit und Bewegung verbunden – für jedes Tempo geeignet.</p>
           <a href="#kontakt" class="b-kk">Anfragen</a>
         </div>
       </div>
-      <!-- Schwimmen – Wasser, Leichtigkeit, Freude -->
+      <!-- Seniorentraining – aktuell -->
       <div class="kk rv d3">
         <div class="ki">
-          <img src="https://images.unsplash.com/photo-1530549387789-4c1017266635?w=700&q=85&auto=format&fit=crop" alt="Schwimmgruppe Auster" style="object-position:center 40%">
-          <span class="kcat">Schwimmen</span>
+          <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=700&q=85&auto=format&fit=crop" alt="Seniorentraining" style="object-position:center 30%">
+          <span class="kcat">Aktuell</span>
         </div>
         <div class="kb">
-          <h3 class="kh">Hobby-Schwimmgruppe Auster</h3>
-          <p class="kloc">📍 Auster Graz</p>
-          <div class="ktime"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Jeden Freitag · 13:30 – 14:30 Uhr</div>
-          <p class="kp">Gemeinsames Schwimmtraining für alle Niveaus. Freude am Wasser steht im Mittelpunkt.</p>
+          <h3 class="kh">Seniorentraining</h3>
+          <p class="kloc">📍 Kulturhalle Eggersdorf · Schulgasse 3</p>
+          <div class="ktime"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Jeden Dienstag · 17:45 – 18:45 Uhr</div>
+          <p class="kp">Kraft, Koordination, Beweglichkeit – in entspannter Atmosphäre. Sicher und mit Freude aktiv bleiben.</p>
           <a href="#kontakt" class="b-kk">Anfragen</a>
+        </div>
+      </div>
+      <!-- Einzelcoaching -->
+      <div class="kk rv d1">
+        <div class="ki">
+          <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=700&q=85&auto=format&fit=crop" alt="Einzelcoaching" style="object-position:center 20%">
+          <span class="kcat">Individuell</span>
+        </div>
+        <div class="kb">
+          <h3 class="kh">Einzelcoaching</h3>
+          <p class="kloc">📍 Graz & Eggersdorf · auch online</p>
+          <div class="ktime"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Termine nach Vereinbarung</div>
+          <p class="kp">Persönliche Begleitung ganz auf Sie abgestimmt – für Beratung, Coaching oder Bewegung.</p>
+          <a href="#kontakt" class="b-kk">Anfragen</a>
+        </div>
+      </div>
+      <!-- Platzhalter 1 -->
+      <div class="kk rv d2" style="display:flex;align-items:center;justify-content:center;min-height:280px;background:var(--cream);border:2px dashed var(--border);box-shadow:none">
+        <div style="text-align:center;padding:1.5rem">
+          <span style="font-size:1.5rem;color:var(--border)">＋</span>
+          <p style="font-size:.8rem;color:var(--text-s);margin-top:.5rem">Weiterer Kurs<br>folgt in Kürze</p>
+        </div>
+      </div>
+      <!-- Platzhalter 2 -->
+      <div class="kk rv d3" style="display:flex;align-items:center;justify-content:center;min-height:280px;background:var(--cream);border:2px dashed var(--border);box-shadow:none">
+        <div style="text-align:center;padding:1.5rem">
+          <span style="font-size:1.5rem;color:var(--border)">＋</span>
+          <p style="font-size:.8rem;color:var(--text-s);margin-top:.5rem">Weiterer Kurs<br>folgt in Kürze</p>
+        </div>
+      </div>
+      <!-- Platzhalter 3 -->
+      <div class="kk rv d1" style="display:flex;align-items:center;justify-content:center;min-height:280px;background:var(--cream);border:2px dashed var(--border);box-shadow:none">
+        <div style="text-align:center;padding:1.5rem">
+          <span style="font-size:1.5rem;color:var(--border)">＋</span>
+          <p style="font-size:.8rem;color:var(--text-s);margin-top:.5rem">Weiterer Kurs<br>folgt in Kürze</p>
         </div>
       </div>
     </div>
