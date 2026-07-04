@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../Images/Eli-da_Lotus.png">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -21,6 +22,7 @@
 }
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
 body{font-family:var(--sans);color:var(--text);background:var(--cream);line-height:1.7;font-weight:300;overflow-x:hidden}
+section{scroll-margin-top:66px}
 .rv{opacity:0;transform:translateY(26px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
 .rv.on{opacity:1;transform:none}
 .rvl{opacity:0;transform:translateX(-26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
@@ -30,54 +32,58 @@ body{font-family:var(--sans);color:var(--text);background:var(--cream);line-heig
 /* NAV */
 #nav{position:fixed;top:0;left:0;right:0;z-index:500;height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(1rem,4vw,2.5rem);transition:background .4s,box-shadow .4s}
 #nav.sticky{background:rgba(250,248,240,.97);box-shadow:0 1px 0 rgba(0,0,0,.07);backdrop-filter:blur(14px)}
-.logo{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:#fff;letter-spacing:.04em;text-decoration:none;transition:color .3s;line-height:1;display:flex;flex-direction:column}
-.logo-sub{font-family:var(--sans);font-size:.55rem;font-weight:300;letter-spacing:.18em;text-transform:uppercase;opacity:.65;margin-top:3px}
+.logo{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:#f6f7e9;letter-spacing:.04em;text-decoration:none;transition:color .3s;line-height:1;display:flex;flex-direction:column}
+.logo-sub{font-family:var(--sans);font-size:.55rem;font-weight:300;letter-spacing:.18em;text-transform:uppercase;opacity:.75;margin-top:3px;color:rgba(246,247,233,.7);transition:color .3s}
 #nav.sticky .logo{color:var(--red)}
+#nav.sticky .logo-sub{color:var(--text-s)}
 .nl{display:flex;gap:1.75rem;list-style:none;align-items:center}
-.nl a{font-size:.76rem;font-weight:400;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.85);text-decoration:none;transition:color .2s}
-#nav.sticky .nl a{color:var(--text-m)}
+.nl a{font-size:.76rem;font-weight:400;letter-spacing:.07em;text-transform:uppercase;color:rgba(246,247,233,.85);text-decoration:none;transition:color .2s}
 .nl a:hover{color:#fff}
+#nav.sticky .nl a{color:var(--text-m)}
 #nav.sticky .nl a:hover{color:var(--red)}
-.ncta{background:rgba(255,255,255,.18)!important;border:1px solid rgba(255,255,255,.35)!important;padding:.4rem 1rem;border-radius:100px;backdrop-filter:blur(4px)}
-#nav.sticky .ncta{background:var(--red)!important;border-color:var(--red)!important;color:#fff!important}
+.ncta{background:var(--red)!important;border:1px solid var(--red)!important;color:#fff!important;padding:.4rem 1rem;border-radius:100px}
+.ncta:hover{background:var(--red2)!important}
 .ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
-.ham span{width:22px;height:1.5px;background:rgba(255,255,255,.9);border-radius:2px;display:block;transition:all .3s}
+.ham span{width:22px;height:1.5px;background:rgba(246,247,233,.9);border-radius:2px;display:block;transition:all .3s}
 #nav.sticky .ham span{background:var(--text)}
+#nav.menu-open .logo{color:var(--red)}
+#nav.menu-open .ham span{background:var(--text)}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 .mob{display:none;position:fixed;inset:0;z-index:490;background:rgba(250,248,240,.97);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:1.5rem}
 .mob.open{display:flex}
 .mob a{font-family:var(--serif);font-size:2rem;font-weight:300;color:var(--text);text-decoration:none;transition:color .2s}
 .mob a:hover{color:var(--red)}
-/* HERO */
-#hero{position:relative;height:100svh;min-height:600px;display:flex;align-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center center;background-image:url('../Images/Wald-Herzblatt-3.jpg')}
-.hero-bg::after{content:'';position:absolute;inset:0;background:rgba(10,5,5,.58)}
+/* HERO – Logo auf dunklem Waldgrün mit Blätter-Optik */
+#hero{position:relative;height:100svh;min-height:640px;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;z-index:0;background:
+  radial-gradient(circle at 50% 36%, rgba(240,243,205,.16) 0%, rgba(240,243,205,0) 48%),
+  linear-gradient(160deg,#4d5522 0%,#39411a 50%,#252c10 100%)}
+.hero-bg svg{position:absolute;inset:0;width:100%;height:100%}
+.hero-bg::before{content:'';position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);width:min(74vw,560px);aspect-ratio:1;border-radius:50%;border:2.5px solid rgba(235,240,200,.32)}
+.hero-bg::after{content:'';position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);width:min(96vw,780px);aspect-ratio:1;border-radius:50%;border:2px solid rgba(235,240,200,.18)}
+.hero-lotus{width:clamp(130px,17vw,185px);margin-bottom:1.1rem;filter:drop-shadow(0 6px 22px rgba(0,0,0,.35))}
+.hero-lotus svg{width:100%;height:auto;display:block}
+.hero-eli{font-family:var(--serif);font-size:clamp(3rem,8vw,5.8rem);font-weight:400;color:#f6f7e9;line-height:1;letter-spacing:.08em;margin-bottom:.45rem}
 .hero-c{position:relative;z-index:10;max-width:1200px;width:100%;margin:0 auto;padding:0 clamp(1.5rem,6vw,4.5rem);text-align:center;display:flex;flex-direction:column;align-items:center}
 .hero-label{display:inline-flex;align-items:center;gap:.65rem;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:1.5rem}
 .hero-label::before{content:'';width:24px;height:1px;background:rgba(255,255,255,.45)}
 h1{font-family:var(--serif);font-size:clamp(3rem,6.8vw,6rem);font-weight:300;line-height:1.07;letter-spacing:-.02em;color:#fff;margin-bottom:1.35rem;max-width:780px}
 h1 em{font-style:italic;color:rgba(255,255,255,.8)}
-.hero-sub{font-size:clamp(.92rem,1.5vw,1.08rem);font-weight:300;color:rgba(255,255,255,.72);max-width:500px;line-height:1.85;margin-bottom:2.5rem}
+.hero-sub{font-size:clamp(.92rem,1.5vw,1.08rem);font-weight:300;color:rgba(244,246,228,.8);max-width:500px;line-height:1.85;margin-bottom:2.5rem}
 .brow{display:flex;gap:.85rem;flex-wrap:wrap}
 .b-red{background:var(--red);color:#fff;padding:.85rem 2.1rem;border-radius:100px;font-size:.83rem;font-weight:500;letter-spacing:.03em;text-decoration:none;transition:background .2s,transform .25s var(--ease);display:inline-block}
 .b-red:hover{background:var(--red2);transform:translateY(-2px)}
-.b-ghost{background:transparent;color:rgba(255,255,255,.9);padding:.85rem 2.1rem;border-radius:100px;font-size:.83rem;font-weight:300;letter-spacing:.03em;text-decoration:none;border:1px solid rgba(255,255,255,.38);transition:border-color .2s,background .2s,transform .25s var(--ease);display:inline-block}
-.b-ghost:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.08);transform:translateY(-2px)}
-.trust{display:flex;gap:1.6rem;margin-top:3rem;padding-top:1.75rem;border-top:1px solid rgba(255,255,255,.35);flex-wrap:wrap}
-.ti{font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#fff;display:flex;align-items:center;gap:.45rem;text-shadow:0 1px 6px rgba(0,0,0,.6)}
-.ti::before{content:'';width:5px;height:5px;border-radius:50%;background:rgba(200,215,80,1);flex-shrink:0}
-.scroll-h{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:.4rem;opacity:.75;animation:bob 2.5s ease-in-out infinite}
+.b-ghost{background:transparent;color:rgba(246,247,233,.92);padding:.85rem 2.1rem;border-radius:100px;font-size:.83rem;font-weight:400;letter-spacing:.03em;text-decoration:none;border:1px solid rgba(246,247,233,.4);transition:border-color .2s,color .2s,background .2s,transform .25s var(--ease);display:inline-block}
+.b-ghost:hover{border-color:rgba(246,247,233,.75);color:#fff;background:rgba(255,255,255,.08);transform:translateY(-2px)}
+.trust{display:flex;gap:1.6rem;margin-top:2.75rem;padding-top:1.6rem;border-top:1px solid rgba(246,247,233,.22);flex-wrap:wrap}
+.ti{font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(246,247,233,.85);display:flex;align-items:center;gap:.45rem}
+.ti::before{content:'';width:5px;height:5px;border-radius:50%;background:#c4cc66;flex-shrink:0}
+.scroll-h{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:10;display:flex;flex-direction:column;align-items:center;gap:.4rem;opacity:.8;animation:bob 2.5s ease-in-out infinite}
 @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
-.scroll-h span{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:#fff;font-weight:500;text-shadow:0 1px 4px rgba(0,0,0,.5)}
-.scroll-h svg{width:16px;height:16px;stroke:#fff;stroke-width:2;fill:none;filter:drop-shadow(0 1px 3px rgba(0,0,0,.4))}
-/* ZITAT */
-#zitat{background:#fff;padding:clamp(3.5rem,7vw,7rem) clamp(1.5rem,5vw,3rem);position:relative;overflow:hidden}
-#zitat::before{content:'„';position:absolute;top:-3rem;left:clamp(1rem,5vw,4rem);font-family:var(--serif);font-size:22rem;font-weight:300;color:rgba(170,171,48,.06);line-height:1;pointer-events:none}
-.zitat-inner{max-width:820px;margin:0 auto;text-align:center;position:relative}
-.z-label{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--green);display:block;margin-bottom:1.5rem}
-blockquote{font-family:var(--serif);font-size:clamp(1.05rem,1.8vw,1.3rem);font-weight:300;font-style:italic;color:var(--text-m);line-height:1.9;margin-bottom:1.1rem;padding:0 clamp(.5rem,3vw,2.5rem)}
-.z-src{font-size:.78rem;color:var(--text-s)}
-.z-pers{margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border);font-family:var(--serif);font-size:1rem;font-style:italic;color:var(--text-m);line-height:1.85}
-.z-pers strong{color:var(--red);font-style:normal;font-weight:500}
+.scroll-h span{font-size:.65rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,247,233,.75);font-weight:500}
+.scroll-h svg{width:16px;height:16px;stroke:rgba(246,247,233,.75);stroke-width:2;fill:none}
 /* INTRO */
 #intro{background:var(--cream);padding:clamp(4rem,8vw,8rem) clamp(1.5rem,5vw,3rem)}
 .intro-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,8rem);align-items:center}
@@ -90,9 +96,9 @@ blockquote{font-family:var(--serif);font-size:clamp(1.05rem,1.8vw,1.3rem);font-w
 .sh{font-family:var(--serif);font-size:clamp(1.6rem,2.8vw,2.5rem);font-weight:300;line-height:1.22;color:var(--text);margin-bottom:1.35rem}
 .sp{font-size:.95rem;font-weight:300;color:var(--text-m);line-height:1.9;max-width:480px}
 /* ANGEBOTE */
-#wege{background:#fff;padding:clamp(4rem,8vw,8rem) clamp(1.5rem,5vw,3rem)}
+#wege{background:#fff;padding:clamp(4rem,8vw,8rem) clamp(1.5rem,5vw,3rem) 0}
 .wege-head{text-align:center;margin-bottom:clamp(3rem,5vw,5rem)}
-.split{display:grid;grid-template-columns:1fr 1fr;min-height:540px;border-radius:20px;overflow:hidden;margin-bottom:2rem;box-shadow:0 4px 40px rgba(0,0,0,.08)}
+.split{display:grid;grid-template-columns:1fr 1fr;min-height:540px;border-radius:20px;overflow:hidden;margin-bottom:2rem;border:1px solid var(--border);box-shadow:0 2px 6px rgba(0,0,0,.05),0 14px 44px rgba(0,0,0,.12)}
 .split.rev .si{order:2}.split.rev .sb{order:1}
 .si{position:relative;overflow:hidden;min-height:380px}
 .si img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .8s var(--ease)}
@@ -169,9 +175,12 @@ blockquote{font-family:var(--serif);font-size:clamp(1.05rem,1.8vw,1.3rem);font-w
 .gi img{width:100%;height:100%;object-fit:cover;transition:transform .65s var(--ease)}
 .gi:hover img{transform:scale(1.07)}
 .gi:nth-child(3){grid-row:1/3}
+#lb{display:none;position:fixed;inset:0;z-index:600;background:rgba(15,10,8,.93);align-items:center;justify-content:center;padding:clamp(1rem,4vw,3rem);cursor:zoom-out}
+#lb.open{display:flex}
+#lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;box-shadow:0 20px 80px rgba(0,0,0,.5)}
 /* CTA */
 #cta{position:relative;overflow:hidden;min-height:540px;display:flex;align-items:center;justify-content:center;padding:clamp(4.5rem,9vw,9rem) clamp(1.5rem,5vw,3rem);text-align:center}
-.cta-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center 60%;background-image:url('../Images/2025_DerersteSchritt.jpg')}
+.cta-bg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:78% 28%;background-image:url('../Images/2025_DerersteSchritt.jpg')}
 .cta-bg::after{content:'';position:absolute;inset:0;background:rgba(10,6,6,.62)}
 .cta-c{position:relative;z-index:1;max-width:640px}
 .cta-h{font-family:var(--serif);font-size:clamp(2rem,5vw,4rem);font-weight:300;color:#fff;line-height:1.12;letter-spacing:-.02em;margin-bottom:1.1rem}
@@ -207,7 +216,26 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
 .fcopy{max-width:1200px;margin:.1rem auto 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.05);text-align:center;font-size:.67rem;color:rgba(255,255,255,.18)}
 @media(max-width:1050px){.ueber-grid{grid-template-columns:1fr;max-width:580px}.pbadge{right:0}.gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.gi:nth-child(n){grid-column:auto;grid-row:auto;height:260px}}
 @media(max-width:900px){.nl{display:none}.ham{display:flex}.intro-grid{grid-template-columns:1fr;gap:3rem}.intro-img-wrap{border-radius:20px}.split{grid-template-columns:1fr}.split.rev .si,.split.rev .sb{order:unset}.si{min-height:260px}.kg{grid-template-columns:1fr 1fr}.ft{flex-direction:column;text-align:center}.flinks{justify-content:center}.bgf-inner{gap:1.5rem}}
-@media(max-width:600px){.kg{grid-template-columns:1fr}.brow{flex-direction:column}.brow a{text-align:center}.trust{gap:1.1rem}.wfull-body{flex-direction:column;gap:1.25rem}.ctad{flex-direction:column;align-items:center;gap:1.25rem}.form-grid{grid-template-columns:1fr}.gal-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.kg{grid-template-columns:1fr}.brow{flex-direction:column}.brow a{text-align:center}.trust{gap:1.1rem}.wfull-body{flex-direction:column;gap:1.25rem}.ctad{flex-direction:column;align-items:center;gap:1.25rem}.form-grid{grid-template-columns:1fr}.gal-grid{grid-template-columns:1fr 1fr;gap:.6rem}.gi:nth-child(n){height:230px}.gi.gi-wide{grid-column:1/-1;height:170px}}
+@media(max-width:700px){
+  input,textarea,select{font-size:1rem} /* verhindert iOS-Auto-Zoom */
+  .kk-ph{min-height:150px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv,.rvl,.rvr{opacity:1!important;transform:none!important;transition:none!important}
+  .scroll-h{animation:none}
+}
+/* Handy im Querformat: Hero kompakt halten, nichts abschneiden */
+@media(max-height:520px) and (orientation:landscape){
+  #hero{min-height:0;height:100svh}
+  .scroll-h{display:none}
+  .hero-lotus{width:72px;margin-bottom:.5rem}
+  .hero-eli{font-size:clamp(2rem,9vh,2.8rem)}
+  .hero-sub{margin-bottom:1.2rem}
+  .trust{margin-top:1.2rem;padding-top:1rem}
+  .si{min-height:220px}
+}
 </style>
 </head>
 <body>
@@ -231,14 +259,79 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
 </div>
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-bg">
+    <svg viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <g id="lf">
+          <path d="M0 0 Q34 -30 74 0 Q34 30 0 0 Z"/>
+          <path d="M8 0 H64" stroke-width="3" fill="none" stroke="rgba(255,255,255,.18)"/>
+        </g>
+      </defs>
+      <use href="#lf" transform="translate(-16 50) rotate(24) scale(1.6)" fill="rgba(190,200,90,.18)"/>
+      <use href="#lf" transform="translate(64 160) rotate(-38) scale(1.15)" fill="rgba(235,240,200,.09)"/>
+      <use href="#lf" transform="translate(24 300) rotate(52) scale(1.4)" fill="rgba(190,200,90,.13)"/>
+      <use href="#lf" transform="translate(96 442) rotate(-16) scale(1.2)" fill="rgba(235,240,200,.07)"/>
+      <use href="#lf" transform="translate(-22 545) rotate(30) scale(1.55)" fill="rgba(190,200,90,.16)"/>
+      <use href="#lf" transform="translate(198 66) rotate(64) scale(.95)" fill="rgba(235,240,200,.07)"/>
+      <use href="#lf" transform="translate(172 236) rotate(-52) scale(.8)" fill="rgba(190,200,90,.11)"/>
+      <use href="#lf" transform="translate(214 530) rotate(12) scale(1.05)" fill="rgba(190,200,90,.11)"/>
+      <use href="#lf" transform="translate(306 30) rotate(-24) scale(.85)" fill="rgba(190,200,90,.10)"/>
+      <use href="#lf" transform="translate(330 556) rotate(-40) scale(.9)" fill="rgba(235,240,200,.06)"/>
+      <use href="#lf" transform="translate(444 16) rotate(38) scale(.75)" fill="rgba(235,240,200,.06)"/>
+      <use href="#lf" transform="translate(468 572) rotate(20) scale(.8)" fill="rgba(190,200,90,.09)"/>
+      <use href="#lf" transform="translate(592 34) rotate(-58) scale(.8)" fill="rgba(190,200,90,.10)"/>
+      <use href="#lf" transform="translate(616 556) rotate(44) scale(.9)" fill="rgba(235,240,200,.06)"/>
+      <use href="#lf" transform="translate(710 70) rotate(18) scale(.95)" fill="rgba(235,240,200,.07)"/>
+      <use href="#lf" transform="translate(748 520) rotate(-28) scale(1.05)" fill="rgba(190,200,90,.12)"/>
+      <use href="#lf" transform="translate(812 220) rotate(58) scale(.85)" fill="rgba(190,200,90,.10)"/>
+      <use href="#lf" transform="translate(830 372) rotate(-46) scale(.9)" fill="rgba(235,240,200,.07)"/>
+      <use href="#lf" transform="translate(896 56) rotate(-14) scale(1.3)" fill="rgba(190,200,90,.16)"/>
+      <use href="#lf" transform="translate(948 200) rotate(36) scale(1.1)" fill="rgba(235,240,200,.09)"/>
+      <use href="#lf" transform="translate(912 470) rotate(70) scale(1.35)" fill="rgba(190,200,90,.14)"/>
+      <use href="#lf" transform="translate(992 340) rotate(-30) scale(1.5)" fill="rgba(190,200,90,.18)"/>
+      <use href="#lf" transform="translate(-10 200) rotate(-64) scale(1.2)" fill="rgba(190,200,90,.15)"/>
+      <use href="#lf" transform="translate(58 388) rotate(40) scale(.9)" fill="rgba(235,240,200,.08)"/>
+      <use href="#lf" transform="translate(140 96) rotate(-20) scale(1.05)" fill="rgba(190,200,90,.13)"/>
+      <use href="#lf" transform="translate(128 512) rotate(58) scale(1.15)" fill="rgba(190,200,90,.14)"/>
+      <use href="#lf" transform="translate(256 128) rotate(30) scale(.7)" fill="rgba(235,240,200,.08)"/>
+      <use href="#lf" transform="translate(262 456) rotate(-48) scale(.85)" fill="rgba(190,200,90,.11)"/>
+      <use href="#lf" transform="translate(382 70) rotate(-36) scale(.65)" fill="rgba(190,200,90,.10)"/>
+      <use href="#lf" transform="translate(396 552) rotate(16) scale(.75)" fill="rgba(235,240,200,.07)"/>
+      <use href="#lf" transform="translate(524 44) rotate(52) scale(.6)" fill="rgba(190,200,90,.09)"/>
+      <use href="#lf" transform="translate(548 588) rotate(-26) scale(.85)" fill="rgba(190,200,90,.10)"/>
+      <use href="#lf" transform="translate(662 22) rotate(-12) scale(.7)" fill="rgba(235,240,200,.07)"/>
+      <use href="#lf" transform="translate(690 540) rotate(62) scale(.95)" fill="rgba(190,200,90,.12)"/>
+      <use href="#lf" transform="translate(768 140) rotate(-54) scale(.8)" fill="rgba(190,200,90,.11)"/>
+      <use href="#lf" transform="translate(796 448) rotate(24) scale(.9)" fill="rgba(235,240,200,.08)"/>
+      <use href="#lf" transform="translate(872 300) rotate(-40) scale(.95)" fill="rgba(190,200,90,.12)"/>
+      <use href="#lf" transform="translate(938 560) rotate(-58) scale(1.2)" fill="rgba(190,200,90,.15)"/>
+      <use href="#lf" transform="translate(984 96) rotate(48) scale(1.1)" fill="rgba(235,240,200,.09)"/>
+      <use href="#lf" transform="translate(196 340) rotate(8) scale(.7)" fill="rgba(235,240,200,.06)"/>
+      <use href="#lf" transform="translate(842 528) rotate(34) scale(1.0)" fill="rgba(190,200,90,.12)"/>
+    </svg>
+  </div>
   <div class="hero-c">
-    <p class="rv" style="font-family:var(--serif);font-size:clamp(3.8rem,9vw,7.5rem);font-weight:400;color:var(--red);line-height:1;letter-spacing:.08em;margin-bottom:.4rem;text-shadow:0 2px 24px rgba(0,0,0,.5)">ELI-DA</p>
-    <h1 class="rv d1" style="font-size:clamp(1.3rem,2.8vw,2rem);font-weight:600;color:#fff;max-width:none;margin-bottom:.3rem;letter-spacing:.04em;text-shadow:0 1px 8px rgba(0,0,0,.5)">Mag. Elisabeth Daniel</h1>
-    <p class="rv d2" style="font-size:clamp(.78rem,1.3vw,.95rem);font-weight:300;color:rgba(255,255,255,.78);letter-spacing:.18em;text-transform:uppercase;margin-bottom:.75rem">Graz und Graz-Umgebung</p>
-    <p class="hero-sub rv d2" style="max-width:480px">Beratung, Coaching und Bewegung für mehr Balance, Gesundheit und Lebensfreude.</p>
+    <div class="hero-lotus rv" aria-hidden="true">
+      <svg viewBox="0 0 1080 760" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" stroke="#b6bd52" stroke-width="26" stroke-linecap="round">
+          <path d="M540 58 Q478 110 428 178 M540 58 Q602 110 652 178"/>
+          <path d="M368 272 Q372 520 540 690 M712 272 Q708 520 540 690"/>
+          <path d="M58 560 Q260 462 512 662 M58 560 Q240 742 512 700"/>
+          <path d="M1022 560 Q820 462 568 662 M1022 560 Q840 742 568 700"/>
+        </g>
+        <g fill="none" stroke="#cb2b52" stroke-width="30" stroke-linecap="round">
+          <path d="M540 272 Q330 128 212 392 Q228 600 540 690"/>
+          <path d="M540 272 Q750 128 868 392 Q852 600 540 690"/>
+          <path d="M540 298 Q452 500 540 690 M540 298 Q628 500 540 690"/>
+        </g>
+      </svg>
+    </div>
+    <p class="hero-eli rv d1">ELI-DA</p>
+    <h1 class="rv d1" style="font-size:clamp(1.25rem,2.6vw,1.9rem);font-weight:500;color:#fff;max-width:none;margin-bottom:.3rem;letter-spacing:.04em">Mag. Elisabeth Daniel</h1>
+    <p class="rv d2" style="font-size:clamp(.78rem,1.3vw,.95rem);font-weight:400;color:#ccd37c;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.75rem">Fitness für Körper &amp; Geist</p>
+    <p class="hero-sub rv d2" style="max-width:520px">Beratung, Coaching und Bewegung für mehr Balance, Gesundheit und Lebensfreude – in Graz und Graz-Umgebung.</p>
     <div class="brow rv d3" style="justify-content:center">
-      <a href="#kontakt" style="background:#fff;color:var(--red);padding:.85rem 2.1rem;border-radius:100px;font-size:.83rem;font-weight:500;letter-spacing:.03em;text-decoration:none;transition:background .2s,transform .25s var(--ease);display:inline-block">Erstgespräch vereinbaren</a>
+      <a href="#kontakt" class="b-red">Erstgespräch vereinbaren</a>
       <a href="#wege" class="b-ghost">Angebot entdecken</a>
     </div>
     <div class="trust rv d4" style="justify-content:center">
@@ -261,20 +354,11 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
     <p style="margin-top:2rem;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)">— Elisabeth</p>
   </div>
 </section>
-<!-- FOTO MIT ZITAT -->
-<section id="zitat" style="background:#fff;padding:clamp(3.5rem,7vw,6rem) clamp(1.5rem,5vw,3rem)">
-  <div class="rv" style="max-width:1000px;margin:0 auto;border-radius:24px;overflow:hidden;aspect-ratio:21/9;position:relative">
-    <img src="../Images/Thomas-Gipfelkreuz-Wolken.jpg" alt="Es ist nie zu spät, aktiv zu werden" style="width:100%;height:100%;object-fit:cover;object-position:center 30%">
-    <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,5,5,.75) 0%,rgba(10,5,5,.3) 55%,transparent 100%);display:flex;align-items:flex-end;justify-content:center;padding:clamp(1.5rem,4vw,3rem)">
-      <blockquote style="font-family:var(--serif);font-size:clamp(1.1rem,2.2vw,1.65rem);font-weight:300;font-style:italic;color:#fff;text-align:center;line-height:1.55;text-shadow:0 2px 8px rgba(0,0,0,.5);margin:0">„Es ist nie zu spät, aktiv zu werden."</blockquote>
-    </div>
-  </div>
-</section>
 <!-- INTRO – Waldweg Steiermark, organische Form, Morgenstimmung -->
 <section id="intro">
   <div class="intro-grid">
     <div class="intro-img-wrap rvl">
-      <img src="../Images/Berg-Silhouette.jpg" alt="Aktiv in der Natur" style="object-position:center 30%">
+      <img src="../Images/Berg-Silhouette.jpg" alt="Aktiv in der Natur" style="object-position:25% center">
     </div>
     <div class="rvr">
       <h2 class="sh">Manchmal zeigt uns das Leben, dass etwas aus dem Gleichgewicht geraten ist.</h2>
@@ -292,7 +376,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
     <!-- BERATUNG – ruhige Frau in Natur, Achtsamkeit, Stille -->
     <div class="split rv">
       <div class="si">
-        <img src="../Images/Gruppe-Felsen-Sommer.jpg" alt="Beratung und Coaching" style="object-position:center 20%">
+        <img src="../Images/Gruppe-Felsen-Sommer.jpg" alt="Beratung und Coaching" style="object-position:center 12%">
       </div>
       <div class="sb">
         <h3 class="wh">Beratung, Coaching &<br>persönliche Entwicklung</h3>
@@ -337,7 +421,7 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
   </div>
 </section>
 <!-- SENIOREN – aktive ältere Frau, Bewegung, Sonne, Lebensfreude -->
-<section id="senioren" style="background:#fff;padding-top:0">
+<section id="senioren" style="background:#fff;padding:0 clamp(1.5rem,5vw,3rem)">
   <div style="max-width:1200px;margin:0 auto">
     <div class="split rv">
       <div class="si">
@@ -361,7 +445,7 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
   </div>
 </section>
 <!-- BGF – Betriebliche Gesundheitsförderung -->
-<section id="bgf" style="background:var(--cream);padding-top:0">
+<section id="bgf" style="background:#fff;padding:0 clamp(1.5rem,5vw,3rem) clamp(2.5rem,5vw,5rem)">
   <div style="max-width:1200px;margin:0 auto">
     <div class="split rev rv">
       <div class="si">
@@ -400,7 +484,7 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
       <!-- Yoga – aktuell -->
       <div class="kk rv d1">
         <div class="ki">
-          <img src="../Images/YogainEggersdorf.jpg" alt="Yoga in Eggersdorf" style="object-position:center 30%">
+          <img src="../Images/YogainEggersdorf.jpg" alt="Yoga in Eggersdorf" loading="lazy" style="object-position:center 30%">
           <span class="kcat">Aktuell</span>
         </div>
         <div class="kb">
@@ -414,7 +498,7 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
       <!-- Alphalauf – aktuell -->
       <div class="kk rv d2">
         <div class="ki">
-          <img src="../Images/Elisabeth-Alphalauf-Banner.jpg" alt="Alphalauf" style="object-position:center top">
+          <img src="../Images/Elisabeth-Alphalauf-Banner.jpg" alt="Alphalauf" loading="lazy" style="object-position:center 42%">
           <span class="kcat">Aktuell</span>
         </div>
         <div class="kb">
@@ -428,7 +512,7 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
       <!-- Seniorentraining – aktuell -->
       <div class="kk rv d3">
         <div class="ki">
-          <img src="../Images/SeniorentrainingEggersdorf.jpg" alt="Seniorentraining Eggersdorf" style="object-position:center 30%">
+          <img src="../Images/SeniorentrainingEggersdorf.jpg" alt="Seniorentraining Eggersdorf" loading="lazy" style="object-position:center 30%">
           <span class="kcat">Aktuell</span>
         </div>
         <div class="kb">
@@ -442,7 +526,7 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
       <!-- Einzelcoaching -->
       <div class="kk rv d1">
         <div class="ki">
-          <img src="../Images/Thomas-Meer-Sonnenstrahlen.jpg" alt="Einzelcoaching" style="object-position:center 40%">
+          <img src="../Images/Thomas-Meer-Sonnenstrahlen.jpg" alt="Einzelcoaching" loading="lazy" style="object-position:center 40%">
           <span class="kcat">Individuell</span>
         </div>
         <div class="kb">
@@ -454,14 +538,14 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
         </div>
       </div>
       <!-- Platzhalter 1 -->
-      <div class="kk rv d2" style="display:flex;align-items:center;justify-content:center;min-height:280px;background:var(--cream);border:2px dashed var(--border);box-shadow:none">
+      <div class="kk kk-ph rv d2" style="display:flex;align-items:center;justify-content:center;min-height:280px;background:var(--cream);border:2px dashed var(--border);box-shadow:none">
         <div style="text-align:center;padding:1.5rem">
           <span style="font-size:1.5rem;color:var(--border)">＋</span>
           <p style="font-size:.8rem;color:var(--text-s);margin-top:.5rem">Weiterer Kurs<br>folgt in Kürze</p>
         </div>
       </div>
       <!-- Platzhalter 2 -->
-      <div class="kk rv d3" style="display:flex;align-items:center;justify-content:center;min-height:280px;background:var(--cream);border:2px dashed var(--border);box-shadow:none">
+      <div class="kk kk-ph rv d3" style="display:flex;align-items:center;justify-content:center;min-height:280px;background:var(--cream);border:2px dashed var(--border);box-shadow:none">
         <div style="text-align:center;padding:1.5rem">
           <span style="font-size:1.5rem;color:var(--border)">＋</span>
           <p style="font-size:.8rem;color:var(--text-s);margin-top:.5rem">Weiterer Kurs<br>folgt in Kürze</p>
@@ -510,15 +594,15 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
     </div>
     <div class="gal-grid rv">
       <!-- Alphalauf Gruppe -->
-      <div class="gi"><img src="../Images/2020-Alphalaufgruppe.jpg" alt="Alphalauf Gruppe" style="object-position:center 50%"></div>
+      <div class="gi gi-wide"><img src="../Images/2020-Alphalaufgruppe.jpg" alt="Alphalauf Gruppe" loading="lazy" style="object-position:center 50%"></div>
       <!-- Yoga Gruppe Pelikastri -->
-      <div class="gi"><img src="../Images/2025-Yoga-Pelikastri.jpg" alt="Yoga Gruppe" style="object-position:center 40%"></div>
+      <div class="gi"><img src="../Images/2025-Yoga-Pelikastri.jpg" alt="Yoga Gruppe" loading="lazy" style="object-position:center 40%"></div>
       <!-- Elisabeth mit Alphalauf Banner -->
-      <div class="gi"><img src="../Images/Elisabeth-Alphalauf-Banner.jpg" alt="Elisabeth Daniel – Alphalauf" style="object-position:center top"></div>
+      <div class="gi"><img src="../Images/Elisabeth-Alphalauf-Banner.jpg" alt="Elisabeth Daniel – Alphalauf" loading="lazy" style="object-position:center 35%"></div>
       <!-- Erster Schritt – Herbstblätter -->
-      <div class="gi"><img src="../Images/2025_DerersteSchritt.jpg" alt="Der erste Schritt" style="object-position:center center"></div>
+      <div class="gi"><img src="../Images/2025_DerersteSchritt.jpg" alt="Der erste Schritt" loading="lazy" style="object-position:78% 25%"></div>
       <!-- Elisabeth beim Yoga im Freien -->
-      <div class="gi"><img src="../Images/2025Yoga1.JPG" alt="Yoga im Freien" style="object-position:center 10%"></div>
+      <div class="gi"><img src="../Images/2025Yoga1.JPG" alt="Yoga im Freien" loading="lazy" style="object-position:center 45%"></div>
     </div>
   </div>
 </section>
@@ -568,7 +652,7 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
       <div class="fg full">
         <label style="display:flex;align-items:flex-start;gap:.6rem;text-transform:none;letter-spacing:0;font-size:.8rem;color:var(--text-m);cursor:pointer;font-weight:300">
           <input type="checkbox" id="dsgvo" style="width:auto;margin-top:.15rem;flex-shrink:0">
-          Ich habe die <a href="#" style="color:var(--red)">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.
+          Ich habe die <a href="datenschutz.html" style="color:var(--red)">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.
         </label>
       </div>
       <div class="fg full">
@@ -590,14 +674,23 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
   </div>
   <div class="fcopy">© 2026 Mag. Elisabeth Daniel · ELI-DA · Graz und Graz-Umgebung · aktiv@eli-da.at · +43 664 106 44 30</div>
 </footer>
+<div id="lb" role="dialog" aria-label="Bildansicht"><img id="lbimg" src="" alt=""></div>
 <script>
 const nav=document.getElementById('nav');
 const tick=()=>nav.classList.toggle('sticky',scrollY>65);
 window.addEventListener('scroll',tick,{passive:true});tick();
 const ham=document.getElementById('ham'),mob=document.getElementById('mob');
-ham.onclick=()=>mob.classList.toggle('open');
-function cm(){mob.classList.remove('open')}
+ham.onclick=()=>{mob.classList.toggle('open');ham.classList.toggle('open');nav.classList.toggle('menu-open')};
+function cm(){mob.classList.remove('open');ham.classList.remove('open');nav.classList.remove('menu-open')}
 mob.querySelectorAll('a').forEach(a=>a.onclick=cm);
+/* Galerie-Lightbox */
+const lb=document.getElementById('lb'),lbimg=document.getElementById('lbimg');
+document.querySelectorAll('.gi').forEach(gi=>gi.onclick=()=>{
+  const im=gi.querySelector('img');
+  lbimg.src=im.src;lbimg.alt=im.alt;lb.classList.add('open');
+});
+lb.onclick=()=>lb.classList.remove('open');
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open');cm()}});
 const io=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}});
 },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
