@@ -123,6 +123,8 @@ h1 em{font-style:italic;color:var(--red)}
 .ki img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease)}
 .kk:hover .ki img{transform:scale(1.06)}
 .ki::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.22))}
+.ki-full::before{content:'';position:absolute;inset:0;background:url('../Images/Elisabeth-Alphalauf-Banner.jpg') center/cover;filter:blur(16px) brightness(.85);transform:scale(1.2)}
+.ki-full img{position:relative;object-fit:contain;z-index:1}
 .kcat{position:absolute;top:.85rem;left:.85rem;background:rgba(255,255,255,.92);backdrop-filter:blur(6px);font-size:.63rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--red);padding:.25rem .72rem;border-radius:100px;z-index:1}
 .kb{padding:1.35rem 1.4rem 1.6rem}
 .kh{font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--text);margin-bottom:.22rem}
@@ -197,7 +199,16 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
 .fcopy{max-width:1200px;margin:.1rem auto 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.05);text-align:center;font-size:.67rem;color:rgba(255,255,255,.18)}
 @media(max-width:1050px){.ueber-grid{grid-template-columns:1fr;max-width:580px}.pbadge{right:0}.gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.gi:nth-child(n){grid-column:auto;grid-row:auto;height:260px}}
 @media(max-width:900px){.nl{display:none}.ham{display:flex}.intro-grid{grid-template-columns:1fr;gap:3rem}.intro-img-wrap{border-radius:20px}.split{grid-template-columns:1fr}.split.rev .si,.split.rev .sb{order:unset}.si{min-height:260px}.kg{grid-template-columns:1fr 1fr}.ft{flex-direction:column;text-align:center}.flinks{justify-content:center}.bgf-inner{gap:1.5rem}}
-@media(max-width:600px){.kg{grid-template-columns:1fr}.brow{flex-direction:column}.brow a{text-align:center}.hero-strip{margin-top:2.2rem}.wfull-body{flex-direction:column;gap:1.25rem}.ctad{flex-direction:column;align-items:center;gap:1.25rem}.form-grid{grid-template-columns:1fr}.gal-grid{grid-template-columns:1fr 1fr;gap:.6rem}.gi:nth-child(n){height:230px}.gi.gi-wide{grid-column:1/-1;height:170px}}
+@media(max-width:600px){
+  #hero{padding:78px 0 1.25rem}
+  .hero-lotus{width:62px;margin-bottom:.9rem}
+  .hero-kicker{font-size:.58rem;margin-bottom:.75rem}
+  #hero h1{font-size:clamp(1.8rem,7.5vw,2.3rem);margin-bottom:.85rem}
+  .hero-sub{font-size:.85rem;line-height:1.7;margin-bottom:1.3rem}
+  .brow a{padding:.7rem 1.6rem}
+  .hero-strip{margin-top:1.5rem}
+  .hero-strip div{height:clamp(120px,19svh,160px);border-radius:160px 160px 14px 14px}
+.kg{grid-template-columns:1fr}.brow{flex-direction:column}.brow a{text-align:center}.wfull-body{flex-direction:column;gap:1.25rem}.ctad{flex-direction:column;align-items:center;gap:1.25rem}.form-grid{grid-template-columns:1fr}.gal-grid{grid-template-columns:1fr 1fr;gap:.6rem}.gi:nth-child(n){height:230px}.gi.gi-wide{grid-column:1/-1;height:170px}}
 @media(max-width:700px){
   input,textarea,select{font-size:1rem} /* verhindert iOS-Auto-Zoom */
   .kk-ph{min-height:150px!important}
@@ -302,7 +313,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
     <!-- BERATUNG – ruhige Frau in Natur, Achtsamkeit, Stille -->
     <div class="split rv">
       <div class="si">
-        <img src="../Images/Gruppe-Felsen-Sommer.jpg" alt="Beratung und Coaching" style="object-position:center 12%">
+        <img src="../Images/2025-Yoga-Pelikastri.jpg" alt="Beratung und Coaching" style="object-fit:contain;background:var(--green-pale)">
       </div>
       <div class="sb">
         <h3 class="wh">Beratung, Coaching &<br>persönliche Entwicklung</h3>
@@ -397,9 +408,9 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
 <!-- WERDE TEIL DER COMMUNITY -->
 <section id="kurse">
   <div class="kurse-c">
-    <!-- Yogafoto vor Werde Teil der Community -->
-    <div class="rv" style="border-radius:20px;overflow:hidden;height:clamp(220px,30vw,400px);margin-bottom:clamp(2.5rem,5vw,4.5rem)">
-      <img src="../Images/2025-Yoga-Pelikastri.jpg" alt="Yoga – Körper und Geist in Einklang" style="width:100%;height:100%;object-fit:cover;object-position:center 30%">
+    <!-- Gruppenfoto vor Werde Teil der Community – ungeschnitten -->
+    <div class="rv" style="border-radius:20px;overflow:hidden;margin-bottom:clamp(2.5rem,5vw,4.5rem)">
+      <img src="../Images/Gruppe-Felsen-Sommer.jpg" alt="Gemeinsam aktiv – werde Teil der Community" style="display:block;width:100%;height:auto">
     </div>
     <div class="kurse-top rv">
       <span class="ey">Kurse & Termine</span>
@@ -423,8 +434,8 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
       </div>
       <!-- Alphalauf – aktuell -->
       <div class="kk rv d2">
-        <div class="ki">
-          <img src="../Images/Gruppe-Felsen-Sommer.jpg" alt="Alphalauf – Gruppe in der Natur" loading="lazy" style="object-position:center top">
+        <div class="ki ki-full">
+          <img src="../Images/Elisabeth-Alphalauf-Banner.jpg" alt="Alphalauf" loading="lazy">
           <span class="kcat">Aktuell</span>
         </div>
         <div class="kb">
@@ -658,4 +669,3 @@ function submitForm(e){
 </script>
 </body>
 </html>
- 
