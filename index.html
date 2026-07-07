@@ -63,6 +63,8 @@ h1{font-family:var(--serif);font-size:clamp(2.6rem,6vw,5rem);font-weight:300;lin
 h1 em{font-style:italic;color:var(--red)}
 .hero-sub{font-size:clamp(.92rem,1.5vw,1.08rem);font-weight:300;color:#55503f;max-width:520px;line-height:1.85;margin-bottom:2.3rem;text-shadow:0 1px 12px rgba(250,248,240,.9)}
 .brow{display:flex;gap:.85rem;flex-wrap:wrap}
+.hero-claim{font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,2vw,1.45rem);font-weight:600;color:var(--text);margin-top:2.2rem;display:inline-flex;align-items:center;gap:1rem;padding:.5rem 1.4rem;background:rgba(250,248,240,.72);backdrop-filter:blur(5px);border-radius:100px}
+.hero-claim::before,.hero-claim::after{content:'';width:36px;height:1px;background:rgba(30,30,30,.45)}
 .b-red{background:var(--red);color:#fff;padding:.85rem 2.1rem;border-radius:100px;font-size:.83rem;font-weight:500;letter-spacing:.03em;text-decoration:none;transition:background .2s,transform .25s var(--ease);display:inline-block;box-shadow:0 6px 24px rgba(0,0,0,.18)}
 .b-red:hover{background:var(--red2);transform:translateY(-2px)}
 .b-ghost{background:rgba(250,248,240,.75);backdrop-filter:blur(6px);color:var(--text);padding:.85rem 2.1rem;border-radius:100px;font-size:.83rem;font-weight:400;letter-spacing:.03em;text-decoration:none;border:1px solid #cfc7ae;transition:border-color .2s,color .2s,background .2s,transform .25s var(--ease);display:inline-block}
@@ -278,11 +280,12 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
     </div>
     <div class="hero-kicker rv d1">Mag. Elisabeth Daniel</div>
     <h1 class="rv d1">Aktiv, vital und <em>lebensfroh</em> – Fitness für Körper &amp; Geist.</h1>
-    <p class="hero-sub rv d2">Beratung, Coaching und Bewegung in Graz und Graz-Umgebung. Es ist nie zu spät, aktiv zu werden.</p>
+    <p class="hero-sub rv d2"><span style="font-size:1.2em;font-weight:400">Beratung, Coaching und Bewegung</span><br>Graz und Graz-Umgebung.</p>
     <div class="brow rv d3" style="justify-content:center">
       <a href="#kontakt" class="b-red">Erstgespräch vereinbaren</a>
       <a href="#wege" class="b-ghost">Angebot entdecken</a>
     </div>
+    <p class="hero-claim rv d4">Es ist nie zu spät, aktiv zu werden.</p>
   </div>
   <div class="hero-photo" aria-hidden="true"><img src="../Images/Wald-ohne-web.jpg" alt=""></div>
 </section>
@@ -676,6 +679,3 @@ function submitForm(e){
   });
   return false;
 }
-</script>
-</body>
-</html>
