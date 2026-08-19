@@ -239,6 +239,49 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
   .hero-photo{height:46vh}
   .si{min-height:220px}
 }
+
+/* HERO 50+ Zeile */
+.hero-50{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2.1vw,1.5rem);font-weight:600;color:var(--text);margin-top:2.2rem;text-shadow:0 0 6px rgba(250,248,240,.95),0 0 14px rgba(250,248,240,.9),0 0 26px rgba(250,248,240,.85)}
+.hero-50+.hero-claim{margin-top:.5rem}
+/* Kurskarten – Zusatzzeilen */
+.ksub{font-family:var(--sans);font-size:.74rem;font-weight:400;letter-spacing:.02em;color:var(--green2);margin:-.1rem 0 .5rem}
+.kmeta{list-style:none;margin:0 0 1rem;padding:0;display:flex;flex-direction:column;gap:.28rem}
+.kmeta li{font-size:.76rem;font-weight:300;color:var(--text-m);padding-left:1rem;position:relative}
+.kmeta li::before{content:'';position:absolute;left:0;top:.55em;width:5px;height:5px;border-radius:50%;background:var(--green)}
+/* AKTUELLE AUSSCHREIBUNGEN */
+.ausschr{margin-top:clamp(2.5rem,5vw,4rem)}
+.ausschr-h{font-family:var(--serif);font-size:clamp(1.25rem,2.2vw,1.7rem);font-weight:300;text-align:center;color:var(--text);margin-bottom:1.6rem}
+.ausschr-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(1.2rem,3vw,2rem);max-width:860px;margin:0 auto}
+.ausschr-k{margin:0;background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 2px 18px rgba(0,0,0,.05);transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+.ausschr-k:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(0,0,0,.09)}
+.ausschr-k img{width:100%;height:auto;display:block;cursor:zoom-in}
+.ausschr-k figcaption{font-size:.76rem;color:var(--text-s);text-align:center;padding:.7rem .9rem;border-top:1px solid var(--border)}
+.ausschr-fb{display:none;padding:1.6rem 1.4rem;flex-direction:column;gap:.4rem;text-align:center;background:var(--green-pale)}
+.ausschr-fb strong{font-family:var(--serif);font-size:1.35rem;font-weight:400;color:var(--red)}
+.ausschr-fb span{font-size:.82rem;font-weight:300;color:var(--text-m)}
+.ausschr-k.nofile img{display:none}
+.ausschr-k.nofile .ausschr-fb{display:flex}
+.ausschr-note{text-align:center;margin-top:1.2rem;font-size:.8rem;color:var(--text-s)}
+/* STIMMEN / TESTIMONIALS */
+#stimmen{background:linear-gradient(180deg,var(--cream) 0%,var(--sand) 100%);padding:clamp(3.5rem,7vw,6rem) clamp(1.5rem,5vw,3rem)}
+.st-inner{max-width:1100px;margin:0 auto}
+.st-top{text-align:center;margin-bottom:clamp(2rem,4vw,3rem)}
+.st-grid{display:flex;align-items:stretch;gap:clamp(1.2rem,3vw,2rem);overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scroll-padding-left:.2rem;padding:.4rem .2rem 1.4rem;margin:0 -.2rem;scrollbar-width:none;-ms-overflow-style:none;cursor:grab}
+.st-grid::-webkit-scrollbar{display:none}
+.st-grid.drag{cursor:grabbing;scroll-snap-type:none;user-select:none}
+.st-k{flex:0 0 min(360px,82vw);scroll-snap-align:start;margin:0;position:relative;display:flex;flex-direction:column;background:var(--white);border:1px solid var(--border);border-radius:16px;padding:clamp(1.6rem,3vw,2.2rem);box-shadow:0 2px 18px rgba(0,0,0,.05)}
+.st-q{font-family:var(--serif);font-size:4rem;line-height:.7;color:var(--green);opacity:.35;margin-bottom:.4rem}
+.st-k blockquote{margin:0 0 1.5rem;font-size:.9rem;font-weight:300;line-height:1.8;color:var(--text-m);flex:1}
+.st-k figcaption{display:flex;align-items:center;gap:.85rem;padding-top:1.1rem;border-top:1px solid var(--border)}
+.st-k figcaption img{width:54px;height:54px;border-radius:50%;object-fit:cover;object-position:center 30%;flex-shrink:0}
+.st-k figcaption span{display:flex;flex-direction:column;line-height:1.35}
+.st-k figcaption b{font-family:var(--serif);font-size:1rem;font-weight:500;color:var(--text)}
+.st-k figcaption i{font-style:normal;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-s);margin-top:.15rem}
+.st-av{width:54px;height:54px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;background:var(--green-pale);color:var(--green2);font-family:var(--serif);font-size:1.05rem;font-weight:500;letter-spacing:.02em}
+.st-dots{display:flex;justify-content:center;gap:.55rem;margin-top:.2rem}
+.st-dots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:var(--border);cursor:pointer;transition:background .3s var(--ease),transform .3s var(--ease)}
+.st-dots button.on{background:var(--green2);transform:scale(1.4)}
+.st-hint{text-align:center;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-s);margin-top:.9rem}
 </style>
 </head>
 <body>
@@ -285,6 +328,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
       <a href="#kontakt" class="b-red">Erstgespräch vereinbaren</a>
       <a href="#wege" class="b-ghost">Angebot entdecken</a>
     </div>
+    <p class="hero-50 rv d4">50+?</p>
     <p class="hero-claim rv d4">Es ist nie zu spät, aktiv zu werden.</p>
   </div>
   <div class="hero-photo" aria-hidden="true"><img src="../Images/Wald-ohne-web.jpg" alt=""></div>
@@ -293,11 +337,11 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
 <section id="mission" style="background:linear-gradient(180deg,#e6ecbe 0%,#faf8f0 72%,#faf8f0 100%);padding:clamp(4rem,8vw,7rem) clamp(1.5rem,5vw,3rem);position:relative;overflow:hidden;text-align:center">
   <div class="rv" style="max-width:780px;margin:0 auto;position:relative;z-index:1">
     <p style="font-family:var(--serif);font-weight:300;font-style:italic;font-size:clamp(1.15rem,2.2vw,1.6rem);line-height:1.75;color:var(--text)">
-      Ich begleite Dich dabei, neue Freiräume zu entdecken, Deine Stärken zu entfalten und Dein Leben bewusst, aktiv und mit Freude zu gestalten.
-      Mit Herz, Humor und Kompetenz unterstütze ich Dich dabei, Dein Selbstvertrauen zu stärken, körperlich und mental beweglich zu bleiben und
-      Deinen ganz persönlichen Weg zu mehr <b style="font-style:normal;font-weight:500;color:var(--green2)">Lebensqualität, Balance und Selbstbestimmung</b> zu finden.
+      Ich begleite dich dabei, neue Freiräume zu entdecken, deine Stärken zu entfalten und dein Leben bewusst, aktiv und mit Freude zu gestalten.
+      Mit Herz, Humor und Kompetenz unterstütze ich dich dabei, dein Selbstvertrauen zu stärken, körperlich und mental beweglich zu bleiben und
+      deinen ganz persönlichen Weg zu mehr <b style="font-style:normal;font-weight:500;color:var(--green2)">Lebensqualität, Balance und Selbstbestimmung</b> zu finden.
       Durch ganzheitliche Methoden wie Yoga, achtsames Bewegungstraining, Alphalauf (.walking) und Brain-Gymnastik schaffen wir gemeinsam neue Energie,
-      fördern Deine Entwicklung und öffnen den Blick für die Möglichkeiten, die in jedem neuen Tag liegen.
+      fördern deine Entwicklung und öffnen den Blick für die Möglichkeiten, die in jedem neuen Tag liegen.
     </p>
     <p style="margin-top:2rem;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-s)">— Elisabeth</p>
   </div>
@@ -310,7 +354,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
     </div>
     <div class="rvr">
       <h2 class="sh">Manchmal zeigt uns das Leben, dass etwas aus dem Gleichgewicht geraten ist.</h2>
-      <p class="sp">Der Körper wird müde. Der Kopf laut. Die Freude leiser. Dann braucht es jemanden, der begleitet – ohne Leistungsdruck, mit echter Achtsamkeit und Herzlichkeit.<br><br>Als Babyboomerin weiß ich: Es ist nie zu spät, aktiv zu werden. Ich möchte dir zeigen, was möglich ist.</p>
+      <p class="sp">Der Körper wird müde. Der Kopf laut. Die Freude leiser. Dann braucht es jemanden, der begleitet – ohne Leistungsdruck, mit echter Achtsamkeit und Herzlichkeit.<br><br>Aus meiner jahrelangen Erfahrung als Trainerin mit der Generation 50+ weiß ich: Es ist nie zu spät, aktiv zu werden. Ich möchte dir zeigen, was möglich ist.</p>
     </div>
   </div>
 </section>
@@ -340,7 +384,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
         <a href="#kontakt" class="wlink">Anfragen →</a>
         <button class="mehr-toggle" onclick="toggleMehr(this)">Mehr erfahren <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="mehr-content">In jedem Leben gibt es „Up and downs", Krisen, die es zu bewältigen gibt.
-Ich habe die Erfahrung gemacht und auch die Wissenschaft bestätigt uns, dass in solchen Zeiten Bewegung und viel Zeit in der Natur enorm hilfreich sind, um zu reflektieren, seine eigenen Kräfte und Ressourcen zu entdecken und selbstbewusst den eigenen Weg zu gehen. Deshalb möchte ich dich dabei unterstützen auch DEINEN Weg zu finden.
+Ich habe die Erfahrung gemacht und auch die Wissenschaft bestätigt uns, dass in solchen Zeiten Bewegung und viel Zeit in der Natur enorm hilfreich sind, um zu reflektieren, seine eigenen Kräfte und Ressourcen zu entdecken und selbstbewusst den eigenen Weg zu gehen. Deshalb möchte ich dich dabei unterstützen auch deinen Weg zu finden.
 </div>
       </div>
     </div>
@@ -351,7 +395,7 @@ Ich habe die Erfahrung gemacht und auch die Wissenschaft bestätigt uns, dass in
       </div>
       <div class="sb">
         <h3 class="wh">Mentale & körperliche<br>Fitness</h3>
-        <p class="wp">Achtsamkeit, das ist für mich der Schlüssel zu einem bewussteren, freudvolleren Leben.
+        <p class="wp">Achtsamkeit ist für mich der Schlüssel zu einem bewussteren, freudvolleren Leben.
 Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegenwärtige Erleben ohne Bewertung im Vordergrund steht. Denn nicht Vergangenheit oder Zukunft, sondern die Gegenwart - JETZT  -  ist die Zeit, auf die wir unmittelbar Einfluss nehmen können.
 </p>
         <div class="wtags">
@@ -363,7 +407,7 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
         </div>
         <a href="#kontakt" class="wlink">Anfragen →</a>
         <button class="mehr-toggle" onclick="toggleMehr(this)">Mehr erfahren <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="mehr-content">Yoga verbindet Atem, Bewegung und Achtsamkeit. Alphalauf ist meditatives Laufen in der Natur – eine Methode, die Körper und Geist verbindet. Ganzheitliches Bewegungstraining stärkt Kraft, Ausdauer und Koordination – immer in deinem Tempo, ohne Druck.</div>
+        <div class="mehr-content">Yoga verbindet Atem, Bewegung und Achtsamkeit. Alphalauf ist meditatives Laufen in der Natur – eine Methode, die Körper und Geist verbindet. Mein ganzheitliches Bewegungstraining für die Generation 50+ verbessert Kraft, Ausdauer und Koordination, trainiert das Gehirn und macht außerdem Spaß!</div>
       </div>
     </div>
   </div>
@@ -387,7 +431,7 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
         </div>
         <a href="#kontakt" class="wlink">Anfragen →</a>
         <button class="mehr-toggle" onclick="toggleMehr(this)">Mehr erfahren <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="mehr-content"> Meine Vision ist es, dass Wir, die sogenannten „Babyboomer" (ca.1955 – 1975 Geborene) für Jüngere Vorbild dafür sind, herkömmliche Glaubenssätze über das Älterwerden über Bord zu werfen und zu zeigen, dass persönliche Entwicklung immer möglich ist. Denn man kann aus jeder Lebenszeit das Beste herausholen.</div>
+        <div class="mehr-content"> Meine Vision ist es, dass Wir, die sogenannten „Babyboomer" (ca.1955 – 1975 Geborene) für Jüngere Vorbild dafür sind, herkömmliche Glaubenssätze über das Älterwerden über Bord zu werfen und zu zeigen, dass persönliche Entwicklung immer möglich ist. Denn man kann in jeder Lebensphase das Beste aus sich herausholen.</div>
       </div>
     </div>
   </div>
@@ -426,8 +470,14 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
       </div>
       <div class="kurse-top rv">
         <span class="ey">Kurse & Termine</span>
-        <h2 class="sh">Werde Teil der Community</h2>
+        <h2 class="sh">Werde Teil der Community <em style="font-style:normal;color:var(--red)">„Fit&amp;Fun-forever“</em></h2>
         <p class="kurse-sub">Besuche einen der derzeit laufenden Kurse und werde Teil unserer Community.</p>
+        <button class="mehr-toggle" onclick="toggleMehr(this)" style="margin-top:.9rem">Mehr erfahren <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="mehr-content" style="max-width:560px">
+          <p style="margin-bottom:.9rem"><strong style="font-weight:500;color:var(--text)">Die Vision:</strong> Meine Generation der sogenannten „Babyboomer" (1955–1977) dazu einzuladen, dem Älterwerden optimistisch entgegenzusehen.</p>
+          <p style="margin-bottom:.9rem"><strong style="font-weight:500;color:var(--text)">Der Schlüssel dazu:</strong> Regelmäßige Bewegung, Interesse und Offenheit für Neues (geistige Fitness) und ein soziales Umfeld, in dem Spaß bzw. Freude am Leben nicht zu kurz kommen.</p>
+          <p>Wenn du Lust hast, Teil dieser positiven Community zu werden, trete der Facebook-Gruppe <strong style="color:var(--red);font-weight:500">„fit&amp;fun-forever"</strong> bei. Dort wirst du in Zukunft über alle meine Aktivitäten informiert – und es würde mich freuen, dich persönlich kennenzulernen.</p>
+        </div>
       </div>
     </div>
     <div class="kg">
@@ -439,9 +489,11 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
         </div>
         <div class="kb">
           <h3 class="kh">Yoga</h3>
-          <p class="kloc">📍 Kulturhalle Eggersdorf · Schulgasse 3</p>
+          <p class="ksub">Level 1 für (Wieder-)Einsteiger*innen</p>
+          <p class="kloc">📍 Kulturhalle Eggersdorf · Schulgasse 3 · bei Schönwetter im Freien</p>
           <div class="ktime"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Jeden Dienstag · 19:00 – 20:15 Uhr</div>
-          <p class="kp">Atemarbeit, Bewegung, Achtsamkeit. Für Anfänger und Fortgeschrittene. Bei Schönwetter am Sportplatz.</p>
+          <p class="kp">Yoga ist mehr als „nur“ Bewegung: Es kräftigt den Körper, führt zu mehr Beweglichkeit und einem besseren Körpergefühl. Durch Atemübungen und Meditationen lernst du, deinen Geist zu beruhigen – das führt zu Entspannung und seelischem Gleichgewicht.</p>
+          <ul class="kmeta"><li>10 Einheiten à 75 Min. · € 150</li><li>Einstieg jederzeit möglich</li></ul>
           <a href="#kontakt" class="b-kk">Anfragen</a>
         </div>
       </div>
@@ -476,22 +528,31 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
       <!-- Einzelcoaching -->
       <div class="kk rv d1">
         <div class="ki">
-          <img src="../Images/Thomas-Meer-Sonnenstrahlen.jpg" alt="Einzelcoaching" loading="lazy" style="object-position:center 40%">
+          <img src="../Images/Thomas-Meer-Sonnenstrahlen.jpg" alt="Einzel- und Paarcoaching" loading="lazy" style="object-position:center 40%">
           <span class="kcat">Individuell</span>
         </div>
         <div class="kb">
-          <h3 class="kh">Einzelcoaching</h3>
-          <p class="kloc">📍 Graz & Eggersdorf · auch online</p>
+          <h3 class="kh">Einzel- und Paarcoaching</h3>
+          <p class="kloc">📍 Graz &amp; Eggersdorf · auch online</p>
           <div class="ktime"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Termine nach Vereinbarung</div>
-          <p class="kp">Persönliche Begleitung ganz auf dich abgestimmt – für Beratung, Coaching oder Bewegung.</p>
+          <p class="kp">Ich biete meine Angebote (Alphalauf, -walking, Yoga, Schwimmtraining, ganzheitliches Bewegungstraining, Fitnesstraining) auch Einzelpersonen, Paaren und Kleingruppen privat an.</p>
           <a href="#kontakt" class="b-kk">Anfragen</a>
         </div>
       </div>
-      <!-- Platzhalter 1 -->
-      <div class="kk kk-ph rv d2" style="display:flex;align-items:center;justify-content:center;min-height:280px;background:var(--cream);border:2px dashed var(--border);box-shadow:none">
-        <div style="text-align:center;padding:1.5rem">
-          <span style="font-size:1.5rem;color:var(--border)">＋</span>
-          <p style="font-size:.8rem;color:var(--text-s);margin-top:.5rem">Weiterer Kurs<br>folgt in Kürze</p>
+      <!-- Smovey-Workout – neu ab 22.09.2026 -->
+      <div class="kk rv d2">
+        <div class="ki">
+          <img src="../Images/SeniorenFIT.jpg" alt="Smovey-Workout – ganzheitliches Bewegungstraining" loading="lazy" style="object-position:center 40%">
+          <span class="kcat">Neu</span>
+        </div>
+        <div class="kb">
+          <h3 class="kh">Smovey-Workout</h3>
+          <p class="ksub">Ganzheitliches Bewegungstraining</p>
+          <p class="kloc">📍 Kulturhalle Eggersdorf · Schulgasse 3</p>
+          <div class="ktime"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Ab Dienstag, 22.09.2026 · 17:45 – 18:45 Uhr</div>
+          <p class="kp">Wir trainieren Kraft, Ausdauer, Koordination (Gleichgewicht), Beweglichkeit und das Gehirn durch Elemente aus der Brain-Gymnastik. Das Wichtigste: Spaß macht es auch!</p>
+          <ul class="kmeta"><li>10 Einheiten · € 120</li><li>Kostenlose Schnupperstunde möglich</li><li>Bitte Turnmatte mitbringen</li></ul>
+          <a href="#kontakt" class="b-kk">Anfragen</a>
         </div>
       </div>
       <!-- Platzhalter 2 -->
@@ -503,6 +564,62 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
       </div>
     </div>
     <p style="text-align:center;margin-top:2rem;font-size:.83rem;color:var(--text-s);font-style:italic">Weitere Kurse, Tages- & Wochenendseminare sowie BGF-Angebote auf Anfrage</p>
+  </div>
+</section>
+<!-- STIMMEN – Testimonials, nebeneinander -->
+<section id="stimmen">
+  <div class="st-inner">
+    <div class="st-top rv">
+      <span class="ey">Stimmen</span>
+      <h2 class="sh" style="margin:0">Was andere sagen</h2>
+    </div>
+    <div class="st-grid" id="stGrid">
+      <figure class="st-k">
+        <div class="st-q" aria-hidden="true">„</div>
+        <blockquote>Mag. Elisabeth Daniel ist sowohl als hervorragende Fitness- und Yogatrainerin als auch Alphalauf Advanced Level Coach seit vielen Jahren wertvoller Teil unseres Teams. Ihr fundiertes Wissen, ihre inspirierende Art und ihre authentische Lebensweise haben schon unzählige Menschen motiviert, sich achtsam zu bewegen. Ich kann sie nur wärmstens empfehlen.</blockquote>
+        <figcaption>
+          <img src="../Images/Testimonial-Johannes-Huber.jpg" alt="Dr. Johannes Huber" loading="lazy">
+          <span><b>Dr. Johannes Huber</b><i>Alphalauf</i></span>
+        </figcaption>
+      </figure>
+      <figure class="st-k">
+        <div class="st-q" aria-hidden="true">„</div>
+        <blockquote>Ich möchte den Alphalauf Kurs bei Elisabeth auf keinen Fall missen, weil ich durch sie um einen großen Erfahrungsschatz im Laufen reicher wurde. Ohne den Kurs würde ich sicher NUR Kilometer machen – mit Anstrengung und ohne Entspannung. Ab nun sind Achtsamkeit und Freude meine Laufbegleiter.</blockquote>
+        <figcaption>
+          <img src="../Images/Testimonial-Andrea-H.jpg" alt="Andrea H." loading="lazy">
+          <span><b>Andrea H.</b><i>Teilnehmerin Alphalauf</i></span>
+        </figcaption>
+      </figure>
+      <!-- DEMO-Stimme – Text, Name und Initialen bitte ersetzen -->
+      <figure class="st-k">
+        <div class="st-q" aria-hidden="true">„</div>
+        <blockquote>Nach dem Bandscheibenvorfall hatte ich Angst vor jeder Bewegung. Elisabeth hat mich Schritt für Schritt zurückgeholt – ohne Druck, dafür mit viel Geduld. Heute gehe ich wieder jeden Tag eine Runde und fühle mich sicher dabei.</blockquote>
+        <figcaption>
+          <div class="st-av" aria-hidden="true">MS</div>
+          <span><b>Margit S.</b><i>Teilnehmerin Seniorentraining</i></span>
+        </figcaption>
+      </figure>
+      <!-- DEMO-Stimme – Text, Name und Initialen bitte ersetzen -->
+      <figure class="st-k">
+        <div class="st-q" aria-hidden="true">„</div>
+        <blockquote>Ich bin mit 61 zum ersten Mal auf eine Yogamatte gestiegen und habe mich keine Sekunde fehl am Platz gefühlt. Die Stunden sind ruhig, humorvoll und trotzdem fordernd. Der Dienstagabend ist mittlerweile mein Fixpunkt in der Woche.</blockquote>
+        <figcaption>
+          <div class="st-av" aria-hidden="true">PR</div>
+          <span><b>Peter R.</b><i>Teilnehmer Yoga Level 1</i></span>
+        </figcaption>
+      </figure>
+      <!-- DEMO-Stimme – Text, Name und Initialen bitte ersetzen -->
+      <figure class="st-k">
+        <div class="st-q" aria-hidden="true">„</div>
+        <blockquote>Wir haben Elisabeth für unsere betriebliche Gesundheitsförderung geholt. Die Rückmeldungen aus dem Team waren durchwegs begeistert – vor allem, weil wirklich jede und jeder mitmachen konnte, unabhängig von der Fitness.</blockquote>
+        <figcaption>
+          <div class="st-av" aria-hidden="true">CW</div>
+          <span><b>Claudia W.</b><i>Betriebliche Gesundheitsförderung</i></span>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="st-dots" id="stDots" aria-hidden="true"></div>
+    <p class="st-hint">← wischen →</p>
   </div>
 </section>
 <!-- ÜBER MICH – echtes Foto von eli-da.at -->
@@ -642,8 +759,40 @@ document.querySelectorAll('.gi').forEach(gi=>gi.onclick=()=>{
   const im=gi.querySelector('img');
   lbimg.src=im.src;lbimg.alt=im.alt;lb.classList.add('open');
 });
+document.querySelectorAll('.ausschr-k img').forEach(im=>im.onclick=()=>{
+  lbimg.src=im.src;lbimg.alt=im.alt;lb.classList.add('open');
+});
 lb.onclick=()=>lb.classList.remove('open');
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('open');cm()}});
+/* Stimmen-Slider: wischen am Handy, ziehen mit der Maus */
+(function(){
+  const g=document.getElementById('stGrid'),dots=document.getElementById('stDots');
+  if(!g||!dots)return;
+  const cards=[].slice.call(g.children);
+  cards.forEach(function(c,i){
+    const b=document.createElement('button');
+    b.type='button';b.setAttribute('aria-label','Stimme '+(i+1));
+    b.addEventListener('click',function(){g.scrollTo({left:c.offsetLeft-cards[0].offsetLeft,behavior:'smooth'})});
+    dots.appendChild(b);
+  });
+  function upd(){
+    let best=0,bd=Infinity;
+    cards.forEach(function(c,i){
+      const d=Math.abs(c.offsetLeft-cards[0].offsetLeft-g.scrollLeft);
+      if(d<bd){bd=d;best=i}
+    });
+    [].slice.call(dots.children).forEach(function(d,j){d.classList.toggle('on',j===best)});
+  }
+  let t;g.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(upd,60)},{passive:true});
+  upd();
+  let down=false,sx=0,sl=0;
+  g.addEventListener('pointerdown',function(e){
+    if(e.pointerType==='touch')return;
+    down=true;sx=e.clientX;sl=g.scrollLeft;g.classList.add('drag');
+  });
+  window.addEventListener('pointermove',function(e){if(down)g.scrollLeft=sl-(e.clientX-sx)});
+  window.addEventListener('pointerup',function(){if(down){down=false;g.classList.remove('drag')}});
+})();
 const io=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}});
 },{threshold:.1,rootMargin:'0px 0px -40px 0px'});

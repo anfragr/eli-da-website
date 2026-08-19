@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutz – ELI-DA | Mag. Elisabeth Daniel</title>
+<meta name="robots" content="noindex, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="../Images/Eli-da_Lotus.png">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#ad1a3b;--red2:#94203b;
+  --green:#aaab30;--green2:#8a8b20;
+  --cream:#faf8f0;--sand:#f0ead8;--white:#fff;
+  --text:#1e1e1e;--text-m:#3a3a3a;--text-s:#6a6a6a;--border:#e0d8c8;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'DM Sans',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:var(--text);background:var(--cream);line-height:1.75;font-weight:300}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;height:66px;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(1rem,4vw,2.5rem);
+  background:rgba(250,248,240,.97);
+  box-shadow:0 1px 0 rgba(0,0,0,.07);
+  backdrop-filter:blur(14px);
+}
+.logo{font-family:var(--serif);font-size:1.5rem;font-weight:400;color:var(--red);letter-spacing:.04em;text-decoration:none;line-height:1;display:flex;flex-direction:column}
+.logo-sub{font-family:var(--sans);font-size:.55rem;font-weight:300;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-top:3px}
+.nav-back{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:400;letter-spacing:.05em;color:var(--text-s);text-decoration:none;transition:color .2s}
+.nav-back:hover{color:var(--red)}
+.nav-back svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
+
+/* HERO BAND */
+.page-hero{
+  background:var(--green2);
+  padding:clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,3rem) clamp(2.5rem,5vw,4rem);
+  position:relative;overflow:hidden;
+}
+.page-hero::before{
+  content:'';position:absolute;right:-80px;top:-80px;
+  width:320px;height:320px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.08);
+}
+.page-hero::after{
+  content:'';position:absolute;right:80px;bottom:-60px;
+  width:200px;height:200px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.05);
+}
+.page-hero-inner{max-width:900px;margin:0 auto;position:relative;z-index:1}
+.page-eyebrow{font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);margin-bottom:.75rem;display:block}
+.page-title{font-family:var(--serif);font-size:clamp(2rem,5vw,3.5rem);font-weight:300;color:#fff;line-height:1.15;margin-bottom:.5rem}
+.page-subtitle{font-size:.9rem;color:rgba(255,255,255,.65);font-weight:300}
+
+/* CONTENT */
+.content-wrap{max-width:900px;margin:0 auto;padding:clamp(3rem,6vw,5rem) clamp(1.5rem,5vw,3rem)}
+
+.imp-section{
+  background:var(--white);
+  border-radius:14px;
+  border:1px solid var(--border);
+  padding:2rem 2.25rem;
+  margin-bottom:1.25rem;
+}
+.imp-section-title{
+  font-family:var(--serif);font-size:1.2rem;font-weight:400;
+  color:var(--text);margin-bottom:1.25rem;
+  padding-bottom:.75rem;
+  border-bottom:2px solid var(--green);
+  display:flex;align-items:center;gap:.6rem;
+}
+.imp-section-title svg{width:18px;height:18px;stroke:var(--green);fill:none;stroke-width:1.5;flex-shrink:0}
+.imp-section p{font-size:.9rem;color:var(--text-m);line-height:1.85;margin-bottom:.85rem}
+.imp-section p:last-child{margin-bottom:0}
+.imp-section ul{margin:.25rem 0 .85rem 1.2rem;font-size:.9rem;color:var(--text-m);line-height:1.85}
+.imp-section a{color:var(--red);text-decoration:none;transition:color .2s}
+.imp-section a:hover{color:var(--red2);text-decoration:underline}
+.imp-section strong{font-weight:500;color:var(--text)}
+
+.note-box{
+  background:rgba(170,171,48,.08);
+  border:1px solid rgba(170,171,48,.3);
+  border-radius:10px;padding:1rem 1.25rem;
+  font-size:.82rem;color:var(--green2);
+  line-height:1.7;margin-top:1.25rem;
+  display:flex;align-items:flex-start;gap:.6rem;
+}
+.note-box svg{width:16px;height:16px;stroke:var(--green2);fill:none;stroke-width:1.5;flex-shrink:0;margin-top:.15rem}
+
+/* FOOTER */
+footer{background:var(--text);padding:clamp(2rem,4vw,3rem) clamp(1.5rem,5vw,3rem)}
+.ft{max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.25rem}
+.flogo{font-family:var(--serif);font-size:1.1rem;color:rgba(255,255,255,.6);font-weight:300;text-decoration:none}
+.flinks{display:flex;gap:1.5rem;list-style:none}
+.flinks a{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s}
+.flinks a:hover{color:rgba(255,255,255,.55)}
+.fcopy{max-width:900px;margin:.1rem auto 0;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.05);text-align:center;font-size:.67rem;color:rgba(255,255,255,.18)}
+
+@media(max-width:700px){
+  .imp-section{padding:1.5rem 1.25rem}
+  .ft{flex-direction:column;text-align:center}
+  .flinks{justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">ELI-DA<span class="logo-sub">Elisabeth Daniel</span></a>
+  <a href="index.html" class="nav-back">
+    <svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+    Zurück zur Website
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-eyebrow">Rechtliches</span>
+    <h1 class="page-title">Datenschutz&shy;erklärung</h1>
+    <p class="page-subtitle">Informationen gemäß Datenschutz-Grundverordnung (DSGVO)</p>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-wrap">
+
+  <div class="imp-section">
+    <h2 class="imp-section-title">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+      Verantwortliche
+    </h2>
+    <p><strong>Mag. Elisabeth Daniel</strong> – FITNESS für Körper &amp; Geist<br>
+    Diepoltsberger Straße 15/1, 8061 St. Radegund bei Graz, Österreich<br>
+    E-Mail: <a href="mailto:aktiv@eli-da.at">aktiv@eli-da.at</a> · Telefon: <a href="tel:+436641064430">+43 664 106 44 30</a></p>
+    <p>Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen. Ich verarbeite Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2021).</p>
+  </div>
+
+  <div class="imp-section">
+    <h2 class="imp-section-title">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16v12H7l-3 3V4z"/></svg>
+      Kontakt mit mir
+    </h2>
+    <p>Wenn Sie per Kontaktformular auf der Website, per E-Mail oder telefonisch Kontakt mit mir aufnehmen, werden die von Ihnen angegebenen Daten (Name, E-Mail-Adresse, Telefonnummer, Inhalt Ihrer Nachricht) zwecks Bearbeitung Ihrer Anfrage und für den Fall von Anschlussfragen bei mir gespeichert.</p>
+    <p>Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Anbahnung bzw. Erfüllung eines Vertrags) sowie Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung Ihrer Anfrage). Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.</p>
+  </div>
+
+  <div class="imp-section">
+    <h2 class="imp-section-title">
+      <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20"/></svg>
+      Server-Logfiles &amp; Cookies
+    </h2>
+    <p>Beim Besuch dieser Website erfasst der Webserver automatisch technische Zugriffsdaten (z.&nbsp;B. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, verwendeter Browser). Diese Daten dienen der Sicherstellung eines störungsfreien Betriebs und der Verbesserung des Angebots und lassen keinen unmittelbaren Rückschluss auf Ihre Person zu.</p>
+    <p>Diese Website verwendet <strong>keine Tracking- oder Marketing-Cookies</strong> und keine Analysedienste.</p>
+  </div>
+
+  <div class="imp-section">
+    <h2 class="imp-section-title">
+      <svg viewBox="0 0 24 24"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>
+      Webfonts (Google Fonts)
+    </h2>
+    <p>Zur einheitlichen Darstellung von Schriftarten nutzt diese Website Schriftarten von Google Fonts (Anbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Beim Aufruf der Seite lädt Ihr Browser die benötigten Schriften und übermittelt dabei technisch bedingt Ihre IP-Adresse an Server von Google.</p>
+    <p>Weitere Informationen finden Sie in der Datenschutzerklärung von Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+  </div>
+
+  <div class="imp-section">
+    <h2 class="imp-section-title">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+      Speicherdauer
+    </h2>
+    <p>Ihre Daten werden nur so lange gespeichert, wie es für die Bearbeitung Ihrer Anfrage bzw. die Erfüllung gesetzlicher Aufbewahrungspflichten erforderlich ist. Danach werden sie gelöscht.</p>
+  </div>
+
+  <div class="imp-section">
+    <h2 class="imp-section-title">
+      <svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/></svg>
+      Ihre Rechte
+    </h2>
+    <p>Ihnen stehen grundsätzlich die folgenden Rechte zu:</p>
+    <ul>
+      <li>Recht auf Auskunft (Art. 15 DSGVO)</li>
+      <li>Recht auf Berichtigung (Art. 16 DSGVO)</li>
+      <li>Recht auf Löschung (Art. 17 DSGVO)</li>
+      <li>Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)</li>
+      <li>Recht auf Datenübertragbarkeit (Art. 20 DSGVO)</li>
+      <li>Widerspruchsrecht (Art. 21 DSGVO)</li>
+    </ul>
+    <p>Zur Ausübung Ihrer Rechte genügt eine formlose Nachricht an <a href="mailto:aktiv@eli-da.at">aktiv@eli-da.at</a>.</p>
+    <p>Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstößt, können Sie sich bei der österreichischen Datenschutzbehörde beschweren: <a href="https://www.dsb.gv.at" target="_blank" rel="noopener">www.dsb.gv.at</a></p>
+  </div>
+
+  <div class="note-box">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+    <span>Stand: Juli 2026. Diese Datenschutzerklärung wird bei Änderungen der Website oder der Rechtslage aktualisiert.</span>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <a href="index.html" class="flogo">ELI-DA · Mag. Elisabeth Daniel</a>
+    <ul class="flinks">
+      <li><a href="eli-da-impressum.html">Impressum</a></li>
+      <li><a href="datenschutz.html">Datenschutz</a></li>
+      <li><a href="index.html#kontakt">Kontakt</a></li>
+    </ul>
+  </div>
+  <div class="fcopy">© 2026 Mag. Elisabeth Daniel · ELI-DA · aktiv@eli-da.at · +43 664 106 44 30</div>
+</footer>
+
+</body>
+</html>
