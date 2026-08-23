@@ -241,7 +241,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
 }
 
 /* HERO 50+ Zeile */
-.hero-50{font-family:var(--serif);font-style:italic;font-size:clamp(1.15rem,2.1vw,1.5rem);font-weight:600;color:var(--text);margin-top:2.2rem;text-shadow:0 0 6px rgba(250,248,240,.95),0 0 14px rgba(250,248,240,.9),0 0 26px rgba(250,248,240,.85)}
+.hero-50{display:inline-block;font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:var(--green2);padding:.4rem 1.1rem;border-radius:100px;margin-top:2.2rem;box-shadow:0 3px 14px rgba(138,139,32,.35)}
 .hero-50+.hero-claim{margin-top:.5rem}
 /* Kurskarten – Zusatzzeilen */
 .ksub{font-family:var(--sans);font-size:.74rem;font-weight:400;letter-spacing:.02em;color:var(--green2);margin:-.1rem 0 .5rem}
@@ -282,6 +282,12 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
 .st-dots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;background:var(--border);cursor:pointer;transition:background .3s var(--ease),transform .3s var(--ease)}
 .st-dots button.on{background:var(--green2);transform:scale(1.4)}
 .st-hint{text-align:center;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-s);margin-top:.9rem}
+
+/* GALERIE – sauberes Raster, keine Doppelbilder */
+.gal-grid{grid-template-columns:repeat(3,1fr)!important;grid-template-rows:auto!important;gap:.85rem}
+.gi{aspect-ratio:3/4;height:auto!important;border-radius:10px}
+.gi:nth-child(n){grid-row:auto!important;grid-column:auto!important;height:auto!important}
+@media(max-width:820px){.gal-grid{grid-template-columns:1fr 1fr!important}}
 </style>
 </head>
 <body>
@@ -328,7 +334,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
       <a href="#kontakt" class="b-red">Erstgespräch vereinbaren</a>
       <a href="#wege" class="b-ghost">Angebot entdecken</a>
     </div>
-    <p class="hero-50 rv d4">50+?</p>
+    <p class="hero-50 rv d4">Für die Generation 50+</p>
     <p class="hero-claim rv d4">Es ist nie zu spät, aktiv zu werden.</p>
   </div>
   <div class="hero-photo" aria-hidden="true"><img src="../Images/Wald-ohne-web.jpg" alt=""></div>
@@ -542,7 +548,7 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
       <!-- Smovey-Workout – neu ab 22.09.2026 -->
       <div class="kk rv d2">
         <div class="ki">
-          <img src="../Images/SeniorenFIT.jpg" alt="Smovey-Workout – ganzheitliches Bewegungstraining" loading="lazy" style="object-position:center 40%">
+          <img src="../Images/Lauf-Gruppe-Ziel.jpg" alt="Smovey-Workout – aktive Gruppe" loading="lazy" style="object-position:center 18%">
           <span class="kcat">Neu</span>
         </div>
         <div class="kb">
@@ -590,31 +596,20 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
           <span><b>Andrea H.</b><i>Teilnehmerin Alphalauf</i></span>
         </figcaption>
       </figure>
-      <!-- DEMO-Stimme – Text, Name und Initialen bitte ersetzen -->
       <figure class="st-k">
         <div class="st-q" aria-hidden="true">„</div>
-        <blockquote>Nach dem Bandscheibenvorfall hatte ich Angst vor jeder Bewegung. Elisabeth hat mich Schritt für Schritt zurückgeholt – ohne Druck, dafür mit viel Geduld. Heute gehe ich wieder jeden Tag eine Runde und fühle mich sicher dabei.</blockquote>
+        <blockquote>Ich durfte Elisabeth sowohl beim Alphalauf als auch in ihren Yoga-Einheiten erleben. Als Alphalauf Coach vermittelt sie die Technik mit Leichtigkeit und großer Freude, im Yoga schafft sie einen Raum für Achtsamkeit, Kraft und Entspannung. Man fühlt sich bei ihr sofort gut aufgehoben. Ihr Engagement in der Senioren-Bewegung mit so viel Geduld und Herz beeindruckt mich sehr. Man spürt einfach, dass sie liebt, was sie tut.</blockquote>
         <figcaption>
-          <div class="st-av" aria-hidden="true">MS</div>
-          <span><b>Margit S.</b><i>Teilnehmerin Seniorentraining</i></span>
+          <div class="st-av" aria-hidden="true">BE</div>
+          <span><b>Brigitte E.</b><i>Alphalauf &amp; Yoga</i></span>
         </figcaption>
       </figure>
-      <!-- DEMO-Stimme – Text, Name und Initialen bitte ersetzen -->
       <figure class="st-k">
         <div class="st-q" aria-hidden="true">„</div>
-        <blockquote>Ich bin mit 61 zum ersten Mal auf eine Yogamatte gestiegen und habe mich keine Sekunde fehl am Platz gefühlt. Die Stunden sind ruhig, humorvoll und trotzdem fordernd. Der Dienstagabend ist mittlerweile mein Fixpunkt in der Woche.</blockquote>
+        <blockquote>Ich habe in Elisabeths Sessions das Gefühl, dass sich jede(r) durch ihre ruhige und warme Art sofort sicher und aufgehoben fühlt und gleichzeitig dazu motiviert wird, die eigenen Grenzen zu entdecken und manchmal auch zu erweitern. Die positive Wirkung ihrer Stunden nimmt man mit nach Hause. Wer eine Trainerin sucht, die Menschen wirklich sieht und mit Herz, Empathie und Kompetenz begleitet, findet in Elisabeth genau das.</blockquote>
         <figcaption>
-          <div class="st-av" aria-hidden="true">PR</div>
-          <span><b>Peter R.</b><i>Teilnehmer Yoga Level 1</i></span>
-        </figcaption>
-      </figure>
-      <!-- DEMO-Stimme – Text, Name und Initialen bitte ersetzen -->
-      <figure class="st-k">
-        <div class="st-q" aria-hidden="true">„</div>
-        <blockquote>Wir haben Elisabeth für unsere betriebliche Gesundheitsförderung geholt. Die Rückmeldungen aus dem Team waren durchwegs begeistert – vor allem, weil wirklich jede und jeder mitmachen konnte, unabhängig von der Fitness.</blockquote>
-        <figcaption>
-          <div class="st-av" aria-hidden="true">CW</div>
-          <span><b>Claudia W.</b><i>Betriebliche Gesundheitsförderung</i></span>
+          <div class="st-av" aria-hidden="true">JE</div>
+          <span><b>Josef E.</b><i>Teilnehmer</i></span>
         </figcaption>
       </figure>
     </div>
@@ -660,16 +655,12 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
       <h2 class="sh" style="margin:0">Natur, Bewegung & Lebensfreude</h2>
     </div>
     <div class="gal-grid rv">
-      <!-- Alphalauf Gruppe -->
-      <div class="gi gi-wide"><img src="../Images/2020-Alphalaufgruppe.jpg" alt="Alphalauf Gruppe" loading="lazy" style="object-position:center 50%"></div>
-      <!-- Yoga Gruppe Pelikastri -->
-      <div class="gi"><img src="../Images/2025-Yoga-Pelikastri.jpg" alt="Yoga Gruppe" loading="lazy" style="object-position:center 40%"></div>
-      <!-- Elisabeth mit Alphalauf Banner -->
+      <div class="gi"><img src="../Images/Elisabeth-Klettersteig.jpg" alt="Elisabeth am Klettersteig" loading="lazy" style="object-position:center 30%"></div>
+      <div class="gi"><img src="../Images/Elisabeth-Pferd.jpg" alt="Elisabeth mit Pferd" loading="lazy" style="object-position:center 20%"></div>
+      <div class="gi"><img src="../Images/Elisabeth-Langlauf.jpg" alt="Elisabeth beim Langlaufen" loading="lazy" style="object-position:center 25%"></div>
+      <div class="gi"><img src="../Images/Elisabeth-Rennrad.jpg" alt="Elisabeth am Rennrad" loading="lazy" style="object-position:center 30%"></div>
       <div class="gi"><img src="../Images/Elisabeth-Alphalauf-Banner.jpg" alt="Elisabeth Daniel – Alphalauf" loading="lazy" style="object-position:center 35%"></div>
-      <!-- Erster Schritt – Herbstblätter -->
       <div class="gi"><img src="../Images/2025_DerersteSchritt.jpg" alt="Der erste Schritt" loading="lazy" style="object-position:78% 25%"></div>
-      <!-- Elisabeth beim Yoga im Freien -->
-      <div class="gi"><img src="../Images/2025Yoga1.JPG" alt="Yoga im Freien" loading="lazy" style="object-position:center 45%"></div>
     </div>
   </div>
 </section>
