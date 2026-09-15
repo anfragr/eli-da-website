@@ -203,15 +203,15 @@ input:focus,textarea:focus,select:focus{border-color:var(--red)}
 textarea{min-height:110px}
 .b-submit{background:var(--red);color:#fff;padding:.88rem 2.5rem;border-radius:100px;font-size:.85rem;font-weight:500;letter-spacing:.04em;border:none;cursor:pointer;transition:background .2s,transform .25s var(--ease);display:block;width:100%;margin-top:.5rem}
 .b-submit:hover{background:var(--red2);transform:translateY(-1px)}
-footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3rem)}
+footer{background:var(--text);padding:clamp(3.2rem,6vw,5rem) clamp(1.5rem,5vw,3rem)}
 .ft{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
-.flogo{font-family:var(--serif);font-size:1.25rem;color:rgba(255,255,255,.65);font-weight:300;text-decoration:none;line-height:1}
-.flogo small{display:block;font-family:var(--sans);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-top:3px}
-.fclaim{font-family:var(--serif);font-style:italic;font-size:.9rem;color:rgba(255,255,255,.22)}
+.flogo{font-family:var(--serif);font-size:1.5rem;color:rgba(255,255,255,.88);font-weight:300;text-decoration:none;line-height:1}
+.flogo small{display:block;font-family:var(--sans);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-top:3px}
+.fclaim{font-family:var(--serif);font-style:italic;font-size:1.1rem;color:rgba(255,255,255,.55)}
 .flinks{display:flex;gap:1.5rem;list-style:none}
-.flinks a{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s}
-.flinks a:hover{color:rgba(255,255,255,.58)}
-.fcopy{max-width:1200px;margin:.1rem auto 0;padding-top:1.4rem;border-top:1px solid rgba(255,255,255,.05);text-align:center;font-size:.67rem;color:rgba(255,255,255,.18)}
+.flinks a{font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.66);text-decoration:none;transition:color .2s}
+.flinks a:hover{color:#fff}
+.fcopy{max-width:1200px;margin:.1rem auto 0;padding-top:1.7rem;margin-top:.6rem;border-top:1px solid rgba(255,255,255,.14);text-align:center;font-size:.8rem;color:rgba(255,255,255,.6)}
 @media(max-width:1050px){.ueber-grid{grid-template-columns:1fr;max-width:580px}.pbadge{right:0}.gal-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}.gi:nth-child(n){grid-column:auto;grid-row:auto;height:260px}}
 @media(max-width:900px){.nl{display:none}.ham{display:flex}.intro-grid{grid-template-columns:1fr;gap:3rem}.intro-img-wrap{border-radius:20px}.split{grid-template-columns:1fr}.split.rev .si,.split.rev .sb{order:unset}.si{min-height:260px}.kg{grid-template-columns:1fr 1fr}.ft{flex-direction:column;text-align:center}.flinks{justify-content:center}.bgf-inner{gap:1.5rem}}
 @media(max-width:600px){
@@ -241,7 +241,7 @@ footer{background:var(--text);padding:clamp(2.5rem,5vw,4rem) clamp(1.5rem,5vw,3r
 }
 
 /* HERO 50+ Zeile */
-.hero-50{display:inline-block;font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:var(--green2);padding:.4rem 1.1rem;border-radius:100px;margin-top:2.2rem;box-shadow:0 3px 14px rgba(138,139,32,.35)}
+.hero-50{display:inline-block;font-family:var(--sans);font-size:1.25rem;font-weight:600;letter-spacing:.12em;color:var(--red);margin-top:2.2rem;text-shadow:0 1px 10px rgba(255,255,255,.7)}
 .hero-50+.hero-claim{margin-top:.5rem}
 /* Kurskarten – Zusatzzeilen */
 .ksub{font-family:var(--sans);font-size:.74rem;font-weight:400;letter-spacing:.02em;color:var(--green2);margin:-.1rem 0 .5rem}
@@ -476,13 +476,11 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
       </div>
       <div class="kurse-top rv">
         <span class="ey">Kurse & Termine</span>
-        <h2 class="sh">Werde Teil der Community <em style="font-style:normal;color:var(--red)">„Club55 - fit&amp;fun forever“</em></h2>
-        <p class="kurse-sub">Besuche einen der derzeit laufenden Kurse und werde Teil unserer Community.</p>
+        <h2 class="sh">Werde Teil der Community <em style="font-style:normal;color:var(--red);white-space:nowrap">„Club55-fit.fun.fearless“</em> <span style="font-family:var(--sans);font-size:.5em;font-weight:400;letter-spacing:.08em;color:var(--text-s);white-space:nowrap">(women only)</span></h2>
         <button class="mehr-toggle" onclick="toggleMehr(this)" style="margin-top:.9rem">Mehr erfahren <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="mehr-content" style="max-width:560px">
-          <p style="margin-bottom:.9rem"><strong style="font-weight:500;color:var(--text)">Die Vision:</strong> Meine Generation der sogenannten „Babyboomer" (1955–1977) dazu einzuladen, dem Älterwerden optimistisch entgegenzusehen.</p>
-          <p style="margin-bottom:.9rem"><strong style="font-weight:500;color:var(--text)">Der Schlüssel dazu:</strong> Regelmäßige Bewegung, Interesse und Offenheit für Neues (geistige Fitness) und ein soziales Umfeld, in dem Spaß bzw. Freude am Leben nicht zu kurz kommen.</p>
-          <p>Wenn du Lust hast, Teil dieser positiven Community zu werden, trete der Facebook-Gruppe <strong style="color:var(--red);font-weight:500">„Club55 - fit&amp;fun forever"</strong> bei. Dort wirst du in Zukunft über alle meine Aktivitäten informiert – und es würde mich freuen, dich persönlich kennenzulernen.</p>
+          <p style="margin-bottom:.9rem">Weil wir Frauen 50+ nicht ins Abseits gehören. Wir wollen sichtbar, aktiv, bunt und selbstbewusst durchs Leben gehen. Nicht an der Jugendlichkeit festhalten, sondern unser Alter feiern - jeden Tag - mit Bewegung, Spaß, Freundschaft, Inspiration und Lebenslust.</p>
+          <p>Wenn du dich angesprochen fühlst, freue ich mich, wenn du Teil meiner Community wirst!</p>
         </div>
       </div>
     </div>
@@ -545,13 +543,6 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
           <div class="ktime"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Termine nach Vereinbarung</div>
           <p class="kp">Ich biete meine Angebote (Alphalauf, -walking, Yoga, Schwimmtraining, ganzheitliches Bewegungstraining, Fitnesstraining) auch Einzelpersonen, Paaren und Kleingruppen privat an.</p>
           <a href="#kontakt" class="b-kk">Anfragen</a>
-        </div>
-      </div>
-      <!-- Platzhalter 2 -->
-      <div class="kk kk-ph rv d2" style="display:flex;align-items:center;justify-content:center;min-height:280px;background:var(--cream);border:2px dashed var(--border);box-shadow:none">
-        <div style="text-align:center;padding:1.5rem">
-          <span style="font-size:1.5rem;color:var(--border)">＋</span>
-          <p style="font-size:.8rem;color:var(--text-s);margin-top:.5rem">Weiterer Kurs<br>folgt in Kürze</p>
         </div>
       </div>
     </div>
