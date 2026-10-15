@@ -496,9 +496,9 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
         <p class="kurse-sub" style="font-size:1.05rem;color:var(--text-m)">Werde Teil der FB-Gruppe <em style="font-style:normal;color:var(--red);font-weight:500;white-space:nowrap">„Club55 - fit. fun. fearless“</em> <span style="font-size:.8rem;letter-spacing:.06em;color:var(--text-s);white-space:nowrap">(women only)</span></p>
         <button class="mehr-toggle" onclick="toggleMehr(this)" style="margin-top:.9rem">Mehr erfahren <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></button>
         <div class="mehr-content" style="max-width:560px">
-          <p style="margin-bottom:.9rem">Ich möchte Frauen dazu inspirieren, körperlich fit zu bleiben, geistig offen und positiv durchs Leben zu gehen.</p>
-          <p style="margin-bottom:.9rem">Weil wir Frauen 50+ nicht ins Abseits gehören. Wir wollen sichtbar, aktiv, bunt und selbstbewusst älter werden. Nicht an der Jugendlichkeit festhalten, sondern unser Leben feiern - jeden Tag - mit Bewegung, Spaß, Freundschaft, Inspiration und Leidenschaft.</p>
-          <p style="margin-bottom:.9rem">Was als FB-Gruppe startet soll eine Community gleichgesinnter, selbstbewusster Frauen werden.</p>
+          <p style="margin-bottom:.9rem">Ich möchte Menschen dazu inspirieren, körperlich fit zu bleiben, geistig offen und positiv durchs Leben zu gehen.</p>
+          <p style="margin-bottom:.9rem">Weil wir - die Generation 50+ - nicht ins Abseits gehören. Wir wollen sichtbar, aktiv und selbstbewusst älter werden. Nicht an der Jugendlichkeit festhalten, sondern unser Leben feiern - jeden Tag - mit Bewegung, Spaß, Freundschaft, Inspiration und Leidenschaft.</p>
+          <p style="margin-bottom:.9rem">Was als Gruppe bunt zusammengewürfelter Menschen beginnt, soll eine starke Community gleichgesinnter Menschen werden, die ihr Leben selbst in die Hand nehmen.</p>
           <p>Wenn du dich angesprochen fühlst, freue ich mich, wenn du Teil davon wirst!</p>
         </div>
       </div>
@@ -617,6 +617,14 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
           <span><b>Josef E.</b><i>Teilnehmer</i></span>
         </figcaption>
       </figure>
+      <figure class="st-k">
+        <div class="st-q" aria-hidden="true">„</div>
+        <blockquote>Ich durfte bei einem verlängerten Wochenende dabei sein und bin absolut begeistert! Elisabeth hat eine wunderbare Gabe, sich perfekt an die unterschiedlichen Altersgruppen und Fitnesslevel anzupassen. Die Tage waren super entspannend, unglaublich erholend und geprägt von ihrem perfekten Engagement. Elisabeth ist in allem, was sie tut und sagt, völlig authentisch. Eine absolute Herzensempfehlung für alle, die Yoga und Wandern lieben!</blockquote>
+        <figcaption>
+          <img src="Images/Testimonial-Yoga-Wandern.jpg" alt="Renate Romanov" loading="lazy">
+          <span><b>Renate Romanov</b><i>Teilnehmerin</i></span>
+        </figcaption>
+      </figure>
     </div>
     <div class="st-dots" id="stDots" aria-hidden="true"></div>
     <p class="st-hint">← wischen →</p>
@@ -729,6 +737,53 @@ Dabei gibt es keinen Leistungsdruck, sondern ein neues Mindset, in dem das gegen
     </form>
   </div>
 </section>
+<!-- NEWSLETTER -->
+<section id="newsletter" style="background:var(--green-pale);padding:clamp(3.5rem,6vw,5.5rem) clamp(1.5rem,5vw,3rem)">
+  <div class="rv" style="max-width:620px;margin:0 auto;text-align:center">
+    <span class="ey" style="color:var(--green2)">Newsletter</span>
+    <h2 class="sh" style="margin-bottom:.8rem">Bleib in Verbindung</h2>
+    <p style="font-size:.95rem;font-weight:300;color:var(--text-m);line-height:1.8;max-width:480px;margin:0 auto 1.8rem">Neue Kurse, Termine und Impulse rund um Bewegung, Achtsamkeit und die Community - direkt in dein Postfach.</p>
+    <form id="nl-form" onsubmit="return nlSubmit(event)" style="display:flex;gap:.6rem;max-width:460px;margin:0 auto;flex-wrap:wrap;justify-content:center">
+      <input type="email" id="nl-email" name="EMAIL" required placeholder="Deine E-Mail-Adresse" autocomplete="email" style="flex:1 1 220px;padding:.82rem 1.2rem;border-radius:100px;border:1.5px solid var(--border);background:#fff;font-family:var(--sans);font-size:.9rem;color:var(--text);font-weight:300;outline:none">
+      <div aria-hidden="true" style="position:absolute;left:-5000px"><input type="text" name="b_9a4de607c943c6b4079298905_c3f06eaf6d" tabindex="-1" value=""></div>
+      <button type="submit" id="nl-btn" style="background:var(--red);color:#fff;border:none;padding:.82rem 2.1rem;border-radius:100px;font-size:.85rem;font-weight:500;letter-spacing:.03em;cursor:pointer;white-space:nowrap">Anmelden</button>
+    </form>
+    <p id="nl-status" style="display:none;margin:1rem auto 0;font-size:.85rem;padding:.65rem 1rem;border-radius:10px;max-width:460px"></p>
+    <p style="font-size:.72rem;color:var(--text-s);margin-top:.9rem">Kein Spam. Du kannst dich jederzeit wieder abmelden.</p>
+  </div>
+</section>
+<script>
+function nlSubmit(e){
+  e.preventDefault();
+  var form=document.getElementById('nl-form');
+  var email=document.getElementById('nl-email').value.trim();
+  var btn=document.getElementById('nl-btn');
+  var status=document.getElementById('nl-status');
+  if(!email) return false;
+  btn.disabled=true; btn.textContent='Wird gesendet …';
+  var hp=form.querySelector('input[name^="b_"]');
+  var base='https://eli-da.us1.list-manage.com/subscribe/post-json?u=9a4de607c943c6b4079298905&id=c3f06eaf6d&f_id=006df0e4f0';
+  var cb='nlcb_'+Date.now();
+  var url=base+'&EMAIL='+encodeURIComponent(email)+'&'+encodeURIComponent(hp.name)+'=&c='+cb;
+  var s=document.createElement('script');
+  window[cb]=function(data){
+    status.style.display='block';
+    if(data&&data.result==='success'){
+      status.style.background='rgba(170,171,48,.16)'; status.style.color='var(--green2)';
+      status.textContent='Fast geschafft! Schau in dein Postfach und bestätige deine Anmeldung.';
+      form.reset(); btn.textContent='Angemeldet ✓';
+    } else {
+      status.style.background='rgba(173,26,59,.1)'; status.style.color='var(--red)';
+      var msg=(data&&data.msg)?String(data.msg).replace(/^\d+\s*-\s*/,''):'Das hat leider nicht geklappt. Bitte versuch es später nochmal.';
+      status.innerHTML=msg;
+      btn.disabled=false; btn.textContent='Anmelden';
+    }
+    try{delete window[cb];}catch(_){} s.remove();
+  };
+  s.src=url; document.body.appendChild(s);
+  return false;
+}
+</script>
 <footer>
   <div class="ft">
     <a href="#hero" class="flogo">ELI-DA<small>Mag. Elisabeth Daniel</small></a>
